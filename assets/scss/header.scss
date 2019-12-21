@@ -1,5 +1,5 @@
 #header {
-    height: 142px;
+    height: $header-height;
     width: 100%;
     display: flex;
 
@@ -20,6 +20,7 @@
         #navigation {
             .navigation-links-list {
                 display: flex;
+                padding-top: 9px;
 
                 .navigation-links-list-item {
                     margin-right: 50px;
@@ -40,13 +41,17 @@
         background-color: $green;
         padding-right: pxToVw(100);
         width: pxToVw(708);
+        justify-content: flex-end;
 
-        #header-contact {
+        .header-contact {
             .contact-links-list {
                 display: flex;
 
                 .contact-links-list-item {
-                    margin-right: 50px;
+
+                    &:not(:last-child) {
+                        margin-right: pxToVw(37);
+                    }
 
                     .contact-link-anchor {
                         text-decoration: none;
@@ -54,6 +59,18 @@
                         font-weight: 600;
                         text-transform: uppercase;
                         font-size: 16px;
+
+                        .contact-icon {
+                            transition: filter $hover-transition-duration ease-in-out;
+                            
+                            &:hover {
+                                filter: invert(1);
+                            }
+                        }
+                        .contact-phone-text {
+                            margin-left: 13px;
+                            font-weight: 700;
+                        }
                     }
                 }
             }

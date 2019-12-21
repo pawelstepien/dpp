@@ -16,11 +16,11 @@ module.exports = {
       },
     output: {
         filename: 'app.js',
-        path: path.resolve(__dirname, './wp-content/themes/dom_pod_poznaniem/assets/')
+        path: path.resolve(__dirname, './build/')
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
-        new UglifyJsPlugin({include: /wp-content\/themes\/dom_pod_poznaniem\/assets/}),
+        new UglifyJsPlugin({include: /\/build/}),
         extractPlugin,
         // new tinyPngWebpackPlugin({
         //     key: 'txGxr550zSlp34GJXt4pWr0QC4WY7Slr' //USE ONLY TO MAKE PRODUCTION BUILD

@@ -1,0 +1,116 @@
+#about-us-page {
+    height: 150vh;
+
+    .section-about-us-top {
+        text-align: center;
+        .about-us-top-photo {
+            height: 358px;
+            background-image: url('/build/media/about-us-parallax-house.jpg');
+            background-size: 100% auto;
+            background-position: top;
+            background-repeat: no-repeat;
+
+            @media screen and (max-width: 991px) {
+                background-size: auto 440px;
+            }
+        }
+
+        .about-us-top-content {
+            display: inline-block;
+            margin: -132px auto 78px;
+            padding: 62px 150px 65px;
+            background: $gray-background;
+            width: 990px;
+            height: 266px;
+            max-width: 100%;
+
+            .about-us-top-content-text {
+                margin-top: 33px;
+                font-size: 19px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+                line-height: 1.6;
+            }
+        }
+
+        .about-us-top-features {
+            padding: 0px 16.6vw;
+            
+            @media screen and (max-width: 1560px) {
+                padding: 0px 10vw;
+            }
+
+            .about-us-top-features-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 0;
+
+                .about-us-feature {
+                    width: 20%;
+                    margin-bottom: 64px;
+                    display: flex;
+                    justify-content: center;
+
+                    @media screen and (max-width: 1360px) {
+                        width: 33.33%;
+                    }
+
+                    @media screen and (max-width: 992px) {
+                        width: 50%;
+                    }
+
+                    .about-us-feature-figure {
+                        margin: 0;
+
+                        .feature-icon-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: center;
+                            height: 100px;
+                            margin-bottom: 25px;
+                        }
+
+                        .feature-icon-text {
+                            font-size: 21px;
+                            color: #767676;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-about-us-download-plan {
+        text-align: center;
+        padding-top: 16px;
+
+        .download-plan-house {
+            display: block;
+
+            &, & * {
+                max-width: 100%;
+            }
+        }
+        .download-plan-anchor {
+            margin: 0 8px;
+            transform: translateY(-50%);
+            display: inline-block;
+
+            .download-plan-button {
+                // transform: translateY(-50%);
+                position: relative;
+                padding-right: 95px;
+                letter-spacing: 0.6px;
+    
+                .download-icon {
+                    position: absolute;
+                    right: 32px;
+                    top: 50%;
+                    transform: translateY(-59%);
+                }
+            }
+        }
+    }
+}
