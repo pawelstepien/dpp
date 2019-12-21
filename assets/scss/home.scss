@@ -1,7 +1,14 @@
 #home-page {
+    display: block; //IE doesn't recognize main element
     position: relative;
+    background-image: url('/build/media/home-page-house.jpg');
+    background-position: right top;
+    background-repeat: no-repeat;
+    height: calc(100vh - #{$header-height});
+    overflow: hidden;
     
     .home-page-house {
+        display: none;
         position: absolute;
         right: 0;
         top: -1px;
@@ -19,9 +26,9 @@
         padding: 55px 87px;
         display: inline-block;
         position: absolute;
-        top: 198px;
-        // top: 50vh;
-        // transform: translate(0, -$header-height / 2) translateY(-50%);
+        // top: 198px;
+        top: 50vh;
+        transform: translate(0, -$header-height / 2) translateY(-50%);
         letter-spacing: 1.6px;
             
         .home-page-title-predecessor {

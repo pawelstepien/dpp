@@ -1,5 +1,32 @@
 #about-us-page {
-    height: 150vh;
+
+    .section-title {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 45px;
+        text-align: center;
+        font-family: 'Playfair Display', 'Tahoma', sans-serif;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            display: inline-block;
+            width: 60px;
+            border-top: 2px solid #000000;
+            border-radius: 3px;
+            box-shadow: 0 0 2px 0px rgba(0,0,0,0.5); 
+            top: 50%;
+            box-sizing: border-box;
+        }
+
+        &::before {
+            transform: translate(-100%, 2px) translateX(-15px);
+        }
+        &::after {
+            transform: translate(0, 2px) translateX(15px);
+        }
+    }
 
     .section-about-us-top {
         text-align: center;
@@ -30,6 +57,7 @@
                 font-weight: 500;
                 letter-spacing: 0.3px;
                 line-height: 1.6;
+                color: #585858;
             }
         }
 
@@ -110,6 +138,471 @@
                     top: 50%;
                     transform: translateY(-59%);
                 }
+            }
+        }
+    }
+
+    .section-about-us-interior {
+        width: 1496px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-top: 31px;
+        
+        .section-title {
+            
+        }
+        .about-us-interior-figure {
+            display: flex;
+            margin-top: 90px;
+            margin-bottom: 63px;
+            max-width: 100%;
+            
+            &:nth-child(2n) {
+                flex-direction: row-reverse;
+                margin-bottom: 155px;
+
+                .interior-content {
+                    margin-top: 45px;
+                    margin-bottom: -45px;
+                    margin-right: -87px;
+                    margin-left: 0;
+                    padding: 40px 140px 35px 96px;
+                }
+            }
+            
+            .about-us-interior-photo {
+                &, * {
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+            
+            .interior-content {
+                padding: 90px 96px 35px 184px;
+                background-color: #f8f8f8;
+                width: 730px;
+                margin-right: 0;
+                margin-left: -87px;
+                margin-top: -45px;
+                margin-bottom: 45px;
+
+                .interior-content-title {
+                    position: relative;
+                    font-size: 36px;
+                    font-family: 'Playfair Display', 'Tahoma', sans-serif;
+                    text-transform: uppercase;
+                    margin-top: 9px;
+                    margin-bottom: 76px;
+                }
+
+                .interior-content-paragraph {
+                    font-size: 19px;
+                    line-height: 1.6;
+                    letter-spacing: 0.5px;
+                    font-weight: 500;
+                    color: #585858;
+                }
+            }
+        }
+    }
+
+    .section-about-us-architecture {
+        text-align: center;
+        padding-top: 16px;
+
+        .section-title {
+            margin-bottom: 102px;
+        }
+
+        .about-us-architecture-house {
+            display: block;
+    
+            &, & * {
+                max-width: 100%;
+            }
+        }
+
+        .about-us-architecture-content {
+            display: inline-block;
+            margin: -176px auto 59px;
+            padding: 62px 150px 65px;
+            background: $gray-background;
+            width: 990px;
+            height: 266px;
+            max-width: 100%;
+
+            .about-us-architecture-content-text {
+                margin-top: 33px;
+                font-size: 19px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+                line-height: 1.6;
+                color: #585858;
+            }
+        }
+
+        .about-us-architecture-features {
+            padding: 0 15.7vw 0 17.3vw;
+            
+            @media screen and (max-width: 1560px) {
+                padding: 0px 10vw;
+            }
+
+            .about-us-architecture-features-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 0;
+
+                .about-us-feature {
+                    width: 25%;
+                    margin-bottom: 24px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+
+                    @media screen and (max-width: 1360px) {
+                        width: 33.33%;
+                    }
+
+                    @media screen and (max-width: 992px) {
+                        width: 50%;
+                    }
+
+                    .about-us-feature-figure {
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        .feature-icon-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100px;
+                            margin-right: 9px;
+                        }
+
+                        .feature-icon-text {
+                            font-size: 21px;
+                            color: #767676;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-about-us-energy-saving {
+        background-color: $gray-background;
+        margin-top: 64px;
+        padding-top: 54px;
+        padding-bottom: 40px;
+
+        .about-us-energy-saving-paragraph {
+            font-size: 19px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            line-height: 1.6;
+            color: #585858;
+            text-align: center;
+            margin-top: 51px;
+            margin-bottom: 51px;
+        }
+
+        .about-us-energy-saving-features {
+            padding: 0px 14.3vw;
+            
+            @media screen and (max-width: 1560px) {
+                padding: 0px 10vw;
+            }
+
+            .about-us-energy-saving-features-list {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 0;
+
+                .about-us-feature {
+                    width: 25%;
+                    margin-bottom: 64px;
+                    display: flex;
+                    justify-content: center;
+
+                    @media screen and (max-width: 1360px) {
+                        width: 33.33%;
+                    }
+
+                    @media screen and (max-width: 992px) {
+                        width: 50%;
+                    }
+
+                    .about-us-feature-figure {
+                        margin: 0;
+
+                        .feature-icon-wrapper {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            align-items: center;
+                            height: 100px;
+                            margin-bottom: 25px;
+                        }
+
+                        .feature-icon-text {
+                            font-size: 21px;
+                            color: #767676;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .section-about-us-location {
+        width: 1496px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        .section-title {
+            margin-top: 91px;
+            margin-bottom: 53px;
+        }
+
+        .about-us-location-paragraph {
+            font-size: 19px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            line-height: 1.6;
+            color: #585858;
+            text-align: center;
+            margin-bottom: 82px;
+        }
+
+        .map-wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .map-left {
+
+                .map-list {
+                    margin-top: -27px;
+
+                    .map-list-item {
+                        min-width: 438px;
+                        height: 80px;
+                        display: flex;
+                        align-items: center;
+                        font-size: 21px;
+                        letter-spacing: 0.6px;
+                        color: #767676;
+                        transition: color $hover-transition-duration ease-in-out;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: #14c557;
+                        }
+
+                        &:not(:last-of-type) {
+                            border-bottom: 1px solid #969696;
+                        }
+                    }
+                }
+            }
+            .map-right {
+
+            }
+        }
+    }
+
+    .section-about-us-functions {
+        width: 1496px;
+        max-width: 100%;
+        margin: 0 auto;
+
+        .section-title {
+            margin-top: 57px;
+            margin-bottom: 50px;
+        }
+
+        .about-us-functions-paragraph {
+            max-width: 900px;
+            text-align: center;
+            margin: 0 auto 87px;
+            font-size: 19px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            line-height: 1.6;
+            color: #585858;
+        }
+
+        .slider-and-date-wrapper {
+            width: 1240px;
+            max-width: 100%;
+            margin: 0 auto;
+            margin-bottom: 82px;
+        }
+        .slider-wrapper {
+            position: relative;
+
+            .slider-arrow {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+
+                &.slider-arrow_left {
+                    left: -100px;
+                }
+                &.slider-arrow_right {
+                    right: -100px;
+                }
+            }
+
+            .slider-slides {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .slide-wrapper {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+
+                &::before, &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: opacity $hover-transition-duration;
+                }
+
+                &::before {
+                    z-index: 1;
+                    height: 100%;
+                    background-color: #000000;
+                }
+                &::after {
+                    z-index: 2;
+                    background-image:  url('/build/media/plus.png');
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+
+                &:hover {
+                    &::before {
+                        opacity: 0.63;
+                    } 
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                .slide-image {
+
+                }
+            }
+        }
+        
+        .about-us-functions-dates {
+            background-color: $gray-background;
+            height: 209px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 86px;
+            padding: 0 80px;
+
+            .left, .right {
+                display: flex;
+                align-items: center;
+
+                .dates-icon {
+                    margin-right: 10px;
+                }
+
+                .dates-text {
+                    font-size: 21px;
+                    font-weight: 700;
+                    letter-spacing: 0.3px;
+                    line-height: 1.6;
+                    color: #585858;
+                }
+
+            }
+        }
+    }
+}
+
+.about-us-footer {
+    background-color: $green;
+    color: #ffffff;
+    padding-top: 32px;
+    padding-bottom: 155px;
+    
+    .footer-title {
+        position: relative;
+        text-transform: uppercase;
+        font-size: 45px;
+        text-align: center;
+        font-family: 'Playfair Display', 'Tahoma', sans-serif;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            display: inline-block;
+            width: 60px;
+            border-top: 2px solid #ffffff;
+            border-radius: 3px;
+            box-shadow: 0 0 2px 0px rgba(255,255,255,0.5); 
+            top: 50%;
+            box-sizing: border-box;
+        }
+
+        &::before {
+            transform: translate(-100%, 2px) translateX(-15px);
+        }
+        &::after {
+            transform: translate(0, 2px) translateX(15px);
+        }
+    }
+
+    .footer-text {
+        text-align: center;
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    .footer-contact-wrapper {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 850px;
+
+        .footer-contact-anchor {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+            
+            .footer-contact-icon {
+
+            }
+            .footer-contact-text {
+                font-size: 27px;
+                font-weight: 700;
             }
         }
     }

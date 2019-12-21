@@ -66,9 +66,9 @@
     </header>
 
     <main id="home-page">
-        <picture class="home-page-house">
+        <!-- <picture class="home-page-house">
             <img src="/build/media/home-page-house.jpg" alt="Dom z zewnątrz">
-        </picture>
+        </picture> -->
         <div class="home-page-content">
             <div class="home-page-content-wrapper">
                 <p class="home-page-title-predecessor">
