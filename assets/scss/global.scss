@@ -34,6 +34,16 @@ figure {
         left: 0;
         bottom: -40px;
         box-shadow: 0 -1px 1px 0px rgba(0,0,0,0.5); 
+
+        @media screen and (max-width: $laptop-breakpoint) {
+            $scale-factor: 0.8;
+            bottom: -40px * $scale-factor;
+        }
+        
+        @media screen and (max-width: $small-laptop-breakpoint) {
+            $scale-factor: 0.667;
+            bottom: -40px * $scale-factor;
+        }
     }
 }
 
@@ -49,8 +59,63 @@ figure {
     line-height: 1;
     letter-spacing: 1.1px;
     cursor: pointer;
+    position: relative;
+    
+    @media screen and (max-width: $laptop-breakpoint) {
+        $scale-factor: 0.8;
+
+        padding: 30px * $scale-factor 32px * $scale-factor;
+        font-size: 17px * $scale-factor;
+        letter-spacing: 1.1px * $scale-factor;
+    }
+    
+    @media screen and (max-width: $small-laptop-breakpoint) {
+        $scale-factor: 0.667;
+
+        padding: 30px * $scale-factor 32px * $scale-factor;
+        font-size: 17px * $scale-factor;
+        letter-spacing: 1.1px * $scale-factor;
+    }
+    
+    .button-text {
+        position: relative;
+        z-index: 2;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: #000000;
+        transform-origin: 0 50%;
+        transform: scaleX(0);
+        transition: transform $hover-transition-duration ease-in-out;
+    }
+    &:hover::before {
+        transform: scaleX(1);
+    }
 }
 
 .parallax-wrapper {
     background-attachment: fixed;
+}
+.page-main {
+    padding-top: $header-height;
+    
+    @media screen and (max-width: $laptop-breakpoint) {
+        $scale-factor: 0.8;
+
+        padding-top: $header-height * $scale-factor;
+    }
+
+    @media screen and (max-width: $small-laptop-breakpoint) {
+        $scale-factor: 0.667;
+
+        padding-top: $header-height * $scale-factor;
+    }
 }

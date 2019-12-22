@@ -23,7 +23,7 @@ require('../media/about-us-map.jpg');
 
 require('../media/play-icon.png');
 require('../media/key-icon.png');
-for(let i = 1; i <= 17; i++) {
+for(let i = 1; i <= 3; i++) {
     require(`../media/slider_${i}.jpg`);
 }
 require('../media/plus.png');

@@ -4,21 +4,38 @@
     background-image: url('/build/media/home-page-house.jpg');
     background-position: right top;
     background-repeat: no-repeat;
-    height: calc(100vh - #{$header-height});
+    height: 100vh;
     overflow: hidden;
+    background-size: 80%;
     
-    .home-page-house {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: -1px;
-        z-index: -1;   
-
-        &, * {
-            max-width: 100%;
-        }
-
+    // @media screen and (max-width: $laptop-breakpoint) {
+    //     $scale-factor: 0.8;
+    //     background-size: 100% * $scale-factor;
+    // }
+    
+    // @media screen and (max-width: $tablet-breakpoint) {
+    //     $scale-factor: 0.667;
+    //     background-size: 100% * $scale-factor;
+    // }
+    
+    @media screen and (max-width: $mobile-breakpoint) {
+        background-size: 100%;
     }
+
+    // .home-page-house {
+    //     display: none;
+    //     position: absolute;
+    //     right: 0;
+    //     top: -1px;
+    //     z-index: -1;   
+
+    //     &, * {
+    //         max-width: 100%;
+    //     }
+
+        
+
+    // }
     
     .home-page-content {
         background-color: $gray-background;
@@ -28,7 +45,7 @@
         position: absolute;
         // top: 198px;
         top: 50vh;
-        transform: translate(0, -$header-height / 2) translateY(-50%);
+        transform: translate(0, $header-height / 2) translateY(-50%);
         letter-spacing: 1.6px;
             
         .home-page-title-predecessor {
@@ -59,5 +76,87 @@
         .button {
             margin-left: 2px;
         }
+
+        @media screen and (max-width: $laptop-breakpoint) {
+            $scale-factor: 0.8;
+
+            & {
+                max-width: 1000px * $scale-factor;
+                padding: 55px * $scale-factor 87px * $scale-factor;
+                transform: translate(0, $header-height / 2) translateY(-50%);
+                letter-spacing: 1.6px * $scale-factor;
+            }
+                
+            .home-page-title-predecessor {
+                font-size: 14px * $scale-factor;
+                margin-bottom: 5px * $scale-factor;
+            }
+            .home-page-title {
+                font-size: 61px * $scale-factor;
+                margin-bottom: 73px * $scale-factor;
+            }
+            .home-page-paragraph {
+                font-size: 17px * $scale-factor;
+                margin-bottom: 41px * $scale-factor;
+                letter-spacing: 0.4px * $scale-factor;
+                max-width: 500px * $scale-factor;
+                
+            }
+        }
+        
+        @media screen and (max-width: $small-laptop-breakpoint) {
+            $scale-factor: 0.667;
+
+            & {
+                max-width: 1000px * $scale-factor;
+                padding: 55px * $scale-factor 87px * $scale-factor;
+                transform: translate(0, $header-height / 2) translateY(-50%);
+                letter-spacing: 1.6px * $scale-factor;
+            }
+                
+            .home-page-title-predecessor {
+                font-size: 14px * $scale-factor;
+                margin-bottom: 5px * $scale-factor;
+            }
+            .home-page-title {
+                font-size: 61px * $scale-factor;
+                margin-bottom: 73px * $scale-factor;
+            }
+            .home-page-paragraph {
+                font-size: 17px * $scale-factor;
+                margin-bottom: 41px * $scale-factor;
+                letter-spacing: 0.4px * $scale-factor;
+                max-width: 500px * $scale-factor;
+                
+            }
+        }
+        
+        @media screen and (max-width: $mobile-breakpoint) {
+            $scale-factor: 0.6;
+
+            & {
+                transform: translate(0, 43px) translateY(-50%);
+                width: 92%;
+                left: 4%;
+                padding: 30px 25px;
+            }
+                
+            .home-page-title-predecessor {
+                font-size: 14px * $scale-factor;
+                margin-bottom: 5px * $scale-factor;
+            }
+            .home-page-title {
+                font-size: 61px * $scale-factor;
+                margin-bottom: 73px * $scale-factor;
+            }
+            .home-page-paragraph {
+                font-size: 17px * $scale-factor;
+                margin-bottom: 41px * $scale-factor;
+                letter-spacing: 0.4px * $scale-factor;
+                max-width: 500px * $scale-factor;
+                
+            }
+        }
     }
+
 }

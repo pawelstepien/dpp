@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .contact-link-anchor {
+            color: #ffffff;
+            /*
+                Prevents flash of unstyled content
+            */
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="/build/app.css" rel="stylesheet">
@@ -18,7 +26,7 @@
             </picture>
 
             <nav id="navigation">
-                <ul class="navigation-links-list">
+                <ul class="navigation-links-list" id="navigation-links-list">
                     <li class="navigation-links-list-item">
                         <a class="navigation-link-anchor" href="/home" title="Home">
                             Home
@@ -37,6 +45,13 @@
                 </ul>
             </nav>
 
+            <div class="hamburger-wrapper">
+                <div id="hamburger">
+                    <div class="hamburger-line" id="hamburger-line_1"></div>
+                    <div class="hamburger-line" id="hamburger-line_2"></div>
+                    <div class="hamburger-line" id="hamburger-line_3"></div>
+                </div>
+            </div>
         </div>
 
         <div class="header-right">
@@ -65,7 +80,7 @@
         </div>
     </header>
 
-    <main id="about-us-page">
+    <main id="about-us-page" class="page-main">
         <section class="section-about-us-top">
             <div class="about-us-top-photo parallax-wrapper">         
             </div>
@@ -195,14 +210,18 @@
             </picture>
             <a href="#" download="" class="download-plan-anchor">
                 <button class="download-plan-button button">
-                    Pobierz kartę lokalu 1
-                    <img src="/build/media/download-icon.png" alt="Pobierz plan lokalu" class="download-icon">
+                    <span class="button-text">
+                        Pobierz kartę lokalu 1
+                        <img src="/build/media/download-icon.png" alt="Pobierz plan lokalu" class="download-icon">
+                    </span>
                 </button>
             </a>
             <a href="#" download="" class="download-plan-anchor">
                 <button class="download-plan-button button">
-                    Pobierz kartę lokalu 2
-                    <img src="/build/media/download-icon.png" alt="Pobierz plan lokalu" class="download-icon">
+                    <span class="button-text">
+                        Pobierz kartę lokalu 2
+                        <img src="/build/media/download-icon.png" alt="Pobierz plan lokalu" class="download-icon">
+                    </span>
                 </button>
             </a>
         </section>
@@ -363,8 +382,9 @@
                 Energooszczędność
             </h2>
             <p class="about-us-energy-saving-paragraph">
-                To nasz priorytet, dlatego zastosowaliśmy szereg rozwiązań nie widocznych <br>
-                na pierwszy rzut oka, które istotnie obniżą zużycie energii i koszty ogrzewania<br> Twojego domu.
+                To nasz priorytet, dlatego zastosowaliśmy szereg rozwiązań nie widocznych
+                na pierwszy rzut oka, które istotnie obniżą zużycie energii i koszty ogrzewania
+                 Twojego domu.
             </p>
 
             <div class="about-us-energy-saving-features">
@@ -425,9 +445,9 @@
                 Zawsze blisko domu
             </h2>
             <p class="about-us-location-paragraph">
-                Lokalizacja ma strategiczne znaczenie dla komfortu życia, dlatego <br>
-                wybraliśmy sąsiedztwo doliny Michałówki gdzie okoliczne łąki i las tworzą <br>
-                oazę spokoju i przestrzeń do spędzania wolnego czasu. Jednocześnie tylko <br>
+                Lokalizacja ma strategiczne znaczenie dla komfortu życia, dlatego 
+                wybraliśmy sąsiedztwo doliny Michałówki gdzie okoliczne łąki i las tworzą 
+                oazę spokoju i przestrzeń do spędzania wolnego czasu. Jednocześnie tylko 
                 1 km będzie dzielił Cię od granicy Poznania.
             </p>
 
@@ -461,9 +481,10 @@
                     </ul>
                 </div>
                 <div class="map-right">
-                    <picture class="map">
+                    <!-- <picture class="map">
                         <img src="/build/media/about-us-map.jpg" alt="Mapa">
-                    </picture>
+                    </picture> -->
+                    <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=pozna%C5%84&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://periodic-table-of-elements.net">table of nuclides</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
                 </div>
             </div>
         </section>
@@ -476,7 +497,16 @@
             <p class="about-us-functions-paragraph">
                 Docenisz gdy już w tym domu zamieszkasz, natomiast My pomyśleliśmy o tym na etapie projektowania domu. Przestronny salon, jadalnia i kuchnia o powierzchni 46,6 m2 umożliwiają układ w wariancie otwartym lub zamkniętym. Pokoje o kształcie zbliżonym do kwadratu pozwalają na swobodę w aranżacji Zaprojektowaliśmy pomieszczenie gospodarczo – techniczne na pralnie oraz kotłownie. W garażu wydzieliliśmy miejsce na rowery, kosiarkę, rolki lub narty Przygotowaliśmy instalacje do podłączenia systemu alarmowego, nawadniania ogrodu oraz zmiękczacza wody.
             </p>
+            
+<!-- 
 
+
+
+
+
+ -->
+                        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
             <div class="slider-and-date-wrapper">
                 <div class="slider-wrapper">
                     <img src="/build/media/slider-arrow_left.png" alt="Poprzednie" class="slider-arrow slider-arrow_left">
@@ -492,9 +522,21 @@
                         <div class="slide-wrapper">
                             <img src="/build/media/slider_3.jpg" alt="" class="slide-image">
                         </div>
+                        <div class="slide-wrapper">
+                            <img src="/build/media/slider_1.jpg" alt="" class="slide-image">
+                        </div>
+                        <div class="slide-wrapper">
+                            <img src="/build/media/slider_2.jpg" alt="" class="slide-image">
+                        </div>
+                        <div class="slide-wrapper">
+                            <img src="/build/media/slider_3.jpg" alt="" class="slide-image">
+                        </div>
                     </div>
                 </div>
     
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
                 <div class="about-us-functions-dates">
                     <div class="left">
                         <img src="/build/media/play-icon.png" alt="Start" class="dates-icon">
@@ -534,5 +576,11 @@
             </a>
         </div>
     </footer>
+
+    <div id="photo-popup">
+    <img src="" alt="" id="popup-image">
+    </div>
+
+    <script src="/build/app.js"></script>
 </body>
 </html>
