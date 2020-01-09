@@ -84,8 +84,9 @@
 
     <main id="about-us-page" class="page-main">
         <section class="section-about-us-top">
-            <div class="about-us-top-photo parallax-wrapper">         
-            </div>
+            <picture>
+                <img class="about-us-top-photo" src="/build/media/about-us-top-house.jpg?version=0.0"> 
+            </picture>
             <div class="about-us-top-content">
                 <div class="horizontal-line"></div>
                 <p class="about-us-top-content-text">
@@ -210,7 +211,7 @@
             <picture class="download-plan-house">
                 <img src="/build/media/about-us-download-plan-house.jpg" alt="Dom Pod Poznaniem">
             </picture>
-            <a href="#" download="" class="download-plan-anchor">
+            <a href="/build/media/Dom_pod_Poznaniem_lok_1.pdf" download class="download-plan-anchor">
                 <button class="download-plan-button button">
                     <span class="button-text">
                         Pobierz kartę lokalu 1
@@ -218,7 +219,7 @@
                     </span>
                 </button>
             </a>
-            <a href="#" download="" class="download-plan-anchor">
+            <a href="/build/media/Dom_pod_Poznaniem_lok_2.pdf" download class="download-plan-anchor">
                 <button class="download-plan-button button">
                     <span class="button-text">
                         Pobierz kartę lokalu 2
@@ -261,7 +262,7 @@
                         <div class="horizontal-line horizontal-line_bellow">
                     </h3>
                     <p class="interior-content-paragraph">
-                    Cześć reprezentacyjna to przestrony salon z panoramicznymi oknami, które zapewniają&nbsp;doskonałe doświetlenie oraz widok na przydomową zieleń i taras.
+                        Cześć reprezentacyjna to przestrony salon z panoramicznymi oknami, które zapewniają&nbsp;doskonałe doświetlenie oraz widok na przydomową zieleń i taras.
                     </p>
                 </figcaption>
             </figure>
@@ -273,7 +274,7 @@
             </h2>
 
             <picture class="about-us-architecture-house">
-                <img src="/build/media/about-us-architecture.jpg" alt="Dom Pod Poznaniem">
+                <img src="/build/media/about-us-architecture.jpg?version=0.0" alt="Dom Pod Poznaniem">
             </picture>
 
             <div class="about-us-architecture-content">
@@ -292,7 +293,7 @@
                                 <img src="/build/media/feature-icon_10.png" alt="Powierzchnia" class="feature-icon">
                             </div>
                             <figcaption class="feature-icon-text">
-                                Dwu kolorowa<br>
+                                Dwukolorowa<br>
                                 elewacja
                             </figcaption>
                         </figure>
@@ -455,20 +456,23 @@
 
             <div class="map-wrapper">
                 <div class="map-left">
-                    <ul class="map-list">
-                        <li class="map-list-item">
+                    <ul class="map-list" id="map-list">
+                        <li class="map-list-item" data-query="52°22'34.4&quot;N 17°03'54.8&quot;E">
+                            Lokalizacja inwestycji
+                        </li>
+                        <li class="map-list-item" data-query="Szkoła Podstawowa nr 2 Zalasewo">
                             Szkoła podstawowa - <b>&nbsp;1 km</b>
                         </li>
-                        <li class="map-list-item">
+                        <li class="map-list-item" data-query="Żłobek|Przedszkole Zalasewo">
                             Przedszkole / żłobek - <b>&nbsp;1 km</b>
                         </li>
-                        <li class="map-list-item">
+                        <li class="map-list-item" data-query="52°22'33.0&quot;N 17°03'38.6&quot;E">
                             Las / tereny spacerowe - <b>&nbsp;300 m</b>
                         </li>
-                        <li class="map-list-item">
+                        <li class="map-list-item" data-query="Lidl|Dino|Biedronka|Żabka Zalasewo|Swarzędz">
                             Lild / Biedronka / Dino / Żabka <b>&nbsp;1,5 km</b>
                         </li>
-                        <li class="map-list-item">
+                        <li class="map-list-item" data-query="Portofino Pełne Smaku Pizza Swarzędz">
                             Restauracja - <b>&nbsp;1,5 km</b>
                         </li>
                         <li class="map-list-item">
@@ -478,15 +482,16 @@
                             Trzy trasy dojazdu do Poznania
                         </li>
                         <li class="map-list-item">
-                            Dwu wariantowy dojazd do A2
+                            Dwuwariantowy dojazd do A2
                         </li>
                     </ul>
                 </div>
                 <div class="map-right">
-                    <!-- <picture class="map">
-                        <img src="/build/media/about-us-map.jpg" alt="Mapa">
-                    </picture> -->
-                    <div class="mapouter"><div class="gmap_canvas"><iframe id="gmap_canvas" src="https://maps.google.com/maps?q=pozna%C5%84&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://periodic-table-of-elements.net">table of nuclides</a></div><style>.mapouter{position:relative;text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+                    <div class="mapouter">
+                        <div class="gmap_canvas">
+                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?&ll=52.376222222222225,17.06522222222222&q=52%C2%B022'34.4%22N%2017%C2%B003'54.8%22E&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -499,15 +504,7 @@
             <p class="about-us-functions-paragraph">
                 Docenisz gdy już w tym domu zamieszkasz, natomiast My pomyśleliśmy o tym na etapie projektowania domu. Przestronny salon, jadalnia i kuchnia o powierzchni 46,6 m2 umożliwiają układ w wariancie otwartym lub zamkniętym. Pokoje o kształcie zbliżonym do kwadratu pozwalają na swobodę w aranżacji Zaprojektowaliśmy pomieszczenie gospodarczo – techniczne na pralnie oraz kotłownie. W garażu wydzieliliśmy miejsce na rowery, kosiarkę, rolki lub narty Przygotowaliśmy instalacje do podłączenia systemu alarmowego, nawadniania ogrodu oraz zmiękczacza wody.
             </p>
-            
-<!-- 
-
-
-
-
-
- -->
-                        
+                       
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
             <div class="slider-and-date-wrapper">
                 <div class="slider-wrapper">
@@ -516,22 +513,29 @@
 
                     <div class="slider-slides">
                         <div class="slide-wrapper">
-                            <img src="/build/media/slider_1.jpg" alt="" class="slide-image">
+                            <div class="slide-crop">
+                                <img src="/build/media/slider_1.jpg?version=0.0" alt="" class="slide-image">
+                            </div>
                         </div>
                         <div class="slide-wrapper">
-                            <img src="/build/media/slider_2.jpg" alt="" class="slide-image">
+                            <div class="slide-crop">
+                                <img src="/build/media/slider_2.jpg?version=0.0" alt="" class="slide-image">
+                            </div>
                         </div>
                         <div class="slide-wrapper">
-                            <img src="/build/media/slider_3.jpg" alt="" class="slide-image">
+                            <div class="slide-crop">
+                                <img src="/build/media/slider_3.jpg?version=0.0" alt="" class="slide-image">
+                            </div>
                         </div>
                         <div class="slide-wrapper">
-                            <img src="/build/media/slider_1.jpg" alt="" class="slide-image">
+                            <div class="slide-crop">
+                                <img src="/build/media/slider_4.jpg?version=0.0" alt="" class="slide-image">
+                            </div>
                         </div>
                         <div class="slide-wrapper">
-                            <img src="/build/media/slider_2.jpg" alt="" class="slide-image">
-                        </div>
-                        <div class="slide-wrapper">
-                            <img src="/build/media/slider_3.jpg" alt="" class="slide-image">
+                            <div class="slide-crop">
+                                <img src="/build/media/slider_5.jpg?version=0.0" alt="" class="slide-image">
+                            </div>
                         </div>
                     </div>
                 </div>
