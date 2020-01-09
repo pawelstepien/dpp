@@ -21,9 +21,11 @@
 <body>
 <header id="header">
         <div class="header-left">
-            <picture class="logo">
-                <img src="/build/media/logo.png" alt="logo">
-            </picture>
+            <a href="/home" class="logo-anchor">
+                <picture class="logo">
+                    <img src="/build/media/logo.png" alt="logo">
+                </picture>
+            </a>
 
             <nav id="navigation">
                 <ul class="navigation-links-list" id="navigation-links-list">
@@ -81,9 +83,11 @@
     </header>
 
     <main id="home-page" class="page-main">
-        <!-- <picture class="home-page-house">
-            <img src="/build/media/home-page-house.jpg" alt="Dom z zewnątrz">
-        </picture> -->
+        <div class="home-page-house-wrapper" id="home-page-house-wrapper">
+            <picture class="home-page-house" id="home-page-house">
+                <img src="/build/media/home-page-parallax-house.jpg" alt="Dom z zewnątrz">
+            </picture>
+        </div>
         <div class="home-page-content">
             <div class="home-page-content-wrapper">
                 <p class="home-page-title-predecessor">

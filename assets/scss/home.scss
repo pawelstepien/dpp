@@ -1,12 +1,12 @@
 #home-page {
     display: block; //IE doesn't recognize main element
     position: relative;
-    background-image: url('/build/media/home-page-house.jpg');
-    background-position: right top;
-    background-repeat: no-repeat;
+    // background-image: url('/build/media/home-page-house.jpg');
+    // background-position: right top;
+    // background-repeat: no-repeat;
     height: 100vh;
     overflow: hidden;
-    background-size: 80%;
+    // background-size: 80%;
     
     // @media screen and (max-width: $laptop-breakpoint) {
     //     $scale-factor: 0.8;
@@ -22,20 +22,43 @@
         background-size: 100%;
     }
 
-    // .home-page-house {
-    //     display: none;
-    //     position: absolute;
-    //     right: 0;
-    //     top: -1px;
-    //     z-index: -1;   
+    .home-page-house-wrapper {
+        height: 100%;
+        position: absolute;
+        width: pxToVw(1414);
+        right: 0;
+        overflow: hidden;
+        top: $header-height;
 
-    //     &, * {
-    //         max-width: 100%;
-    //     }
-
+        @media screen and (max-width: $laptop-breakpoint) {
+            $scale-factor: 0.8;
+            top: $header-height * $scale-factor;
+        }
+    
+        @media screen and (max-width: $small-laptop-breakpoint) {
+            $scale-factor: 0.667;
+            top: $header-height * $scale-factor;
+        }
+        @media screen and (max-width: $tablet-breakpoint) {
+            top: 86px;
+            width: 100%;
+        }
         
 
-    // }
+        .home-page-house {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+            // transform: translateY(-50%);
+
+            &, * {
+                width: 100%;
+            }
+        }
+
+    }
+
     
     .home-page-content {
         background-color: $gray-background;
@@ -105,7 +128,7 @@
         }
         
         @media screen and (max-width: $small-laptop-breakpoint) {
-            $scale-factor: 0.667;
+            $scale-factor: 0.725;
 
             & {
                 max-width: 1000px * $scale-factor;
@@ -123,14 +146,18 @@
                 margin-bottom: 73px * $scale-factor;
             }
             .home-page-paragraph {
-                font-size: 17px * $scale-factor;
-                margin-bottom: 41px * $scale-factor;
-                letter-spacing: 0.4px * $scale-factor;
-                max-width: 500px * $scale-factor;
+                font-size: 17px * $scale-factor * 1.1;
+                margin-bottom: 41px * $scale-factor * 1.1;
+                letter-spacing: 0.4px * $scale-factor * 1.1;
+                max-width: 500px * $scale-factor * 1.1;
                 
             }
         }
         
+        @media screen and (max-width: $tablet-breakpoint) {
+            top: 60vh;
+
+        }
         @media screen and (max-width: $mobile-breakpoint) {
             $scale-factor: 0.6;
 

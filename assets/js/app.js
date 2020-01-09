@@ -7,3 +7,6 @@ initHeader();
 
 import { slider } from './slider.js';
 slider();
+
+// import { initParallax } from './parallax.js';
+// setTimeout(initParallax, 500);

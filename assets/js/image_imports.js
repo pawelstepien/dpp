@@ -7,6 +7,7 @@ require('../media/phone-icon_white.png');
 require('../media/phone-icon_black.png');
 
 require('../media/home-page-house.jpg');
+require('../media/home-page-parallax-house.jpg');
 
 require('../media/about-us-top-house.jpg');
 for(let i = 1; i <= 17; i++) {

@@ -115,7 +115,7 @@
             }
 
             @media screen and (max-width: $laptop-breakpoint) {
-                $scale-factor: 0.8;
+                $scale-factor: 0.85;
 
                 margin: -132px * $scale-factor auto 78px * $scale-factor;
                 padding: 62px * $scale-factor 150px * $scale-factor 30px * $scale-factor;
@@ -128,24 +128,13 @@
                 }
 
             }
-
-            @media screen and (max-width: $small-laptop-breakpoint) {
-                $scale-factor: 0.667;
-
-                
-            }
-
-            @media screen and (max-width: $tablet-breakpoint) {
-                $scale-factor: 0.6;
-
-            }
         }
 
         .about-us-top-features {
             padding: 0px 16.6vw;
             
             @media screen and (max-width: $small-laptop-breakpoint) {
-                padding: 0px 20vw;
+                padding: 0px 13vw;
             }
 
             @media screen and (max-width: $tablet-breakpoint) {
@@ -183,10 +172,33 @@
                     }
 
                     @media screen and (max-width: $small-laptop-breakpoint) {
-                        width: 33.33%;
+                        .about-us-feature-figure {
+                            margin: 0;
+    
+                            .feature-icon-wrapper {
+                                margin-bottom: 15px;
+
+                                .feature-icon {
+                                    transform: scale(0.667);
+                                }
+                            }
+    
+                            .feature-icon-text {
+                                font-size: 16px;
+                            }
+                        }
                     }
 
                     @media screen and (max-width: $tablet-breakpoint) {
+                        width: 33.3%;
+
+                        .about-us-feature-figure {
+                            .feature-icon-text {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    @media screen and (max-width: $mobile-breakpoint) {
                         width: 50%;
 
                         .about-us-feature-figure {
@@ -247,7 +259,7 @@
 
     .section-about-us-interior {
         width: 1496px;
-        max-width: 100%;
+        max-width: $container-max-width;
         margin: 0 auto;
         padding-top: 31px;
         
@@ -337,9 +349,15 @@
 
             @media screen and (max-width: $small-laptop-breakpoint) {
                 $scale-factor: 0.667;
-
+                .about-us-interior-photo {
+                    &, * {
+                        position: relative;
+                        z-index: 1;
+                        max-width: 53.5vw;
+                    }
+                }
                 .interior-content {
-
+                    padding-top: 66px;
                     .interior-content-title {
                         font-size: 36px * $scale-factor;
                         margin-top: 9px * $scale-factor;
@@ -499,6 +517,13 @@
                 .about-us-architecture-features-list {
                     .about-us-feature {
                         width: 33.33%;
+
+                        .about-us-feature-figure {
+
+                            .feature-icon-text {
+                                font-size: 16px;
+                            }
+                        }
                     }
                 }
             }
@@ -615,7 +640,22 @@
             @media screen and (max-width: $small-laptop-breakpoint) {
                 .about-us-energy-saving-features-list {
                     .about-us-feature {
-                        width: 50%;
+                        .about-us-feature-figure {
+                            margin: 0;
+
+                            .feature-icon-text {
+                                font-size: 16px;
+                            }
+    
+                            .feature-icon-wrapper {
+                                margin-bottom: 15px;
+
+                                .feature-icon {
+                                    transform: scale(0.6667);
+                                }
+                            }
+                        }
+
                     }
                 }
             }
@@ -625,12 +665,7 @@
 
                 .about-us-energy-saving-features-list {
                     .about-us-feature {
-
-                        .about-us-feature-figure {
-                            .feature-icon-text {
-                                font-size: 16px;
-                            }
-                        }
+                        width: 50%;
                     }
                 }
             }
@@ -653,8 +688,12 @@
 
     .section-about-us-location {
         width: 1496px;
-        max-width: 100%;
+        max-width: $container-max-width;
         margin: 0 auto;
+
+        @media screen and (max-width: $mobile-breakpoint) {
+            max-width: 100%;
+        }
 
         .section-title {
             margin-top: 91px;
@@ -865,12 +904,14 @@
         }
         .slider-wrapper {
             position: relative;
+            margin: 0 -22px;
 
             .slider-arrow {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
                 cursor: pointer;
+                z-index: 10;
 
                 &.slider-arrow_left {
                     left: -100px;
@@ -911,11 +952,17 @@
                     top: 50%;
                     width: 30px * $scale-factor;
                     &.slider-arrow_left {
-                        left: -25px;
+                        left: -5px;
                     }
                     &.slider-arrow_right {
-                        right: -25px;
+                        right: -5px;
                     }
+                }
+                @media screen and (max-width: 440px) {
+                    top: 45%;
+                }
+                @media screen and (max-width: 360px) {
+                    top: 40%;
                 }
             }
 
@@ -935,13 +982,14 @@
                 display: inline-block;
                 position: relative;
                 cursor: pointer;
+                padding: 0 22px;
 
                 &::before, &::after {
                     content: '';
                     position: absolute;
                     top: 0;
-                    left: 0;
-                    width: 100%;
+                    left: 22px;
+                    width: calc(100% - 44px);
                     height: 100%;
                     opacity: 0;
                     transition: opacity $hover-transition-duration;
@@ -1271,7 +1319,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(2.5);
         max-width: 90%;
     }
 

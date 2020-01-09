@@ -7,7 +7,6 @@
     left: 0;
     z-index: 100;
     box-shadow: 0 2px 5px 1px rgba(0,0,0,0.25);
-
     
     .header-left, .header-right {
         display: flex;
@@ -19,8 +18,12 @@
         padding-left: pxToVw(92);
         width: pxToVw(1212);
 
-        .logo {
-            margin-right: pxToVw(103);
+        .logo-anchor {
+            display: inline-flex;
+
+            .logo {
+                margin-right: pxToVw(103);
+            }
         }
         .hamburger-wrapper {
             display: none;
@@ -96,6 +99,21 @@
                     }
                 }
             }
+
+            @media screen and (min-width: $tablet-breakpoint + 1px) and (max-width: $small-laptop-breakpoint) {
+                $scale-factor: 0.8;
+                
+
+                .navigation-links-list {
+                    .navigation-links-list-item {
+                        margin-right: 50px * $scale-factor;
+    
+                        .navigation-link-anchor {
+                            font-size: 16px * $scale-factor;
+                        }
+                    }
+                }
+            }
         }
     }
     .header-right {
@@ -132,6 +150,11 @@
                             letter-spacing: 0.3px;
                             color: #ffffff;
                             transition: color $hover-transition-duration ease-in-out;
+
+                            @media screen and (min-width: $tablet-breakpoint + 1px) and (max-width: $small-laptop-breakpoint) {
+                                $scale-factor: 0.9;
+                                font-size: 16px * $scale-factor;
+                            }
                         }
 
                         &:hover {

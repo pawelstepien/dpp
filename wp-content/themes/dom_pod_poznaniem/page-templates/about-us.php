@@ -21,9 +21,11 @@
 <body>
     <header id="header">
         <div class="header-left">
-            <picture class="logo">
-                <img src="/build/media/logo.png" alt="logo">
-            </picture>
+            <a href="/home" class="logo-anchor">
+                <picture class="logo">
+                    <img src="/build/media/logo.png" alt="logo">
+                </picture>
+            </a>
 
             <nav id="navigation">
                 <ul class="navigation-links-list" id="navigation-links-list">
@@ -461,22 +463,22 @@
                             Przedszkole / żłobek - <b>&nbsp;1 km</b>
                         </li>
                         <li class="map-list-item">
-                            Las / tereny spacerowe - <b>&nbsp;400 m</b>
+                            Las / tereny spacerowe - <b>&nbsp;300 m</b>
                         </li>
                         <li class="map-list-item">
-                            Dwu wariantowy dojazd do A2
+                            Lild / Biedronka / Dino / Żabka <b>&nbsp;1,5 km</b>
                         </li>
                         <li class="map-list-item">
-                            Lild / Biedronka / Dino / Żabka <b>&nbsp;1 km</b>
+                            Restauracja - <b>&nbsp;1,5 km</b>
                         </li>
                         <li class="map-list-item">
-                            Restauracja - <b>&nbsp;1 km</b>
-                        </li>
-                        <li class="map-list-item">
-                            Odległość od granicy Poznania - <b>&nbsp;400&nbsp;km</b>
+                            Odległość od granicy Poznania - <b>&nbsp;0,5 km</b>
                         </li>
                         <li class="map-list-item">
                             Trzy trasy dojazdu do Poznania
+                        </li>
+                        <li class="map-list-item">
+                            Dwu wariantowy dojazd do A2
                         </li>
                     </ul>
                 </div>
