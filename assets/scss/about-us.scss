@@ -109,11 +109,6 @@
                 color: #585858;
             }
 
-            @media screen and (max-width: $tablet-breakpoint) {
-                height: auto;
-                padding: 62px 13vw 30px;
-            }
-
             @media screen and (max-width: $laptop-breakpoint) {
                 $scale-factor: 0.85;
 
@@ -127,6 +122,11 @@
                     letter-spacing: 0.3px * $scale-factor;
                 }
 
+            }
+
+            @media screen and (max-width: $tablet-breakpoint) {
+                height: auto;
+                padding: 62px 13vw 30px;
             }
         }
 

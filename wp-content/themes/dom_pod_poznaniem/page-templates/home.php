@@ -14,7 +14,7 @@
     </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="/build/app.css" rel="stylesheet">
+    <link href="/build/app.css?version=0.1" rel="stylesheet">
     <title>Dom Pod Poznaniem</title>
 </head>
 
@@ -113,6 +113,6 @@
         </div>
     </main>
 
-    <script src="/build/app.js"></script>
+    <script src="/build/app.js?version=0.1"></script>
 </body>
 </html>
