@@ -81,15 +81,17 @@
     .section-about-us-top {
         text-align: center;
         .about-us-top-photo {
-            height: 358px;
-            background-image: url('/build/media/about-us-parallax-house.jpg');
-            background-size: 100% auto;
-            background-position: top;
-            background-repeat: no-repeat;
+            // height: 358px;
+            // background-image: url('/build/media/about-us-parallax-house.jpg');
+            // background-size: 100% auto;
+            // background-position: top;
+            // background-repeat: no-repeat;
 
-            @media screen and (max-width: 991px) {
-                background-size: auto 440px;
-            }
+            // @media screen and (max-width: 991px) {
+            //     background-size: auto 440px;
+            // }
+            margin: 0 auto;
+            max-width: 100%;
         }
 
         .about-us-top-content {
@@ -416,7 +418,7 @@
 
         .about-us-architecture-house {
             display: block;
-    
+            
             &, & * {
                 max-width: 100%;
             }
@@ -760,6 +762,10 @@
                         transition: color $hover-transition-duration ease-in-out;
                         cursor: pointer;
 
+                        b {
+                            pointer-events: none;
+                        }
+
                         &:hover {
                             color: #14c557;
                         }
@@ -976,6 +982,10 @@
                 &:not(.slick-initialized) .slide-wrapper:nth-of-type(n+4) {
                     display: none;
                 }
+
+                .slick-slide {
+                    outline: none;
+                }
             }
 
             .slide-wrapper {
@@ -1016,8 +1026,19 @@
                     }
                 }
 
-                .slide-image {
-                    width: 100%;
+            //     .slide-image {
+            //         width: 100%;
+            //     }
+                .slide-crop {
+                    overflow: hidden;
+                    position: relative;
+
+                    .slide-image {
+                        height: 100%;
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
                 }
             }
         }
@@ -1319,7 +1340,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%) scale(2.5);
+        transform: translate(-50%, -50%);
         max-width: 90%;
     }
 

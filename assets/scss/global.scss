@@ -118,4 +118,9 @@ figure {
 
         padding-top: $header-height * $scale-factor;
     }
+    @media screen and (max-width: $tablet-breakpoint) {
+        $scale-factor: 0.6;
+
+        padding-top: $header-height * $scale-factor;
+    }
 }

@@ -8,5 +8,8 @@ initHeader();
 import { slider } from './slider.js';
 slider();
 
+import { map } from './map.js';
+map();
+
 // import { initParallax } from './parallax.js';
 // setTimeout(initParallax, 500);

@@ -53,9 +53,18 @@ export const slider = () => {
     }
 
     popup.addEventListener('click', closePopup);
-    [].slice.call(document.querySelectorAll('.slider-slides .slide-wrapper')).forEach(slide => {
-        slide.addEventListener('click', event => {
-            setPopupImage(slide.querySelector('.slide-image').src);
-        })
+    document.addEventListener('keyup', event => {
+        if (event.key === 'Escape') {
+            closePopup();
+        }
     })
+
+    const slidesWrapper = document.querySelector('.slider-slides');
+    slidesWrapper.addEventListener('click', event => {
+        const slide = event.target.querySelector('.slide-image');
+        if (!slide) return;
+        
+        setPopupImage(slide.src);
+    });
+
 }
