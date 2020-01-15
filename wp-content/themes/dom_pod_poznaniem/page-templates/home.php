@@ -14,7 +14,7 @@
     </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="/build/app.css?version=0.1" rel="stylesheet">
+    <link href="/build/app.css?version=0.2" rel="stylesheet">
     <title>Dom Pod Poznaniem</title>
 </head>
 
@@ -32,6 +32,11 @@
                     <li class="navigation-links-list-item">
                         <a class="navigation-link-anchor" href="/home" title="Home">
                             Home
+                        </a>
+                    </li>
+                    <li class="navigation-links-list-item">
+                        <a class="navigation-link-anchor" href="/dom-w-swarzedzu" title="Dom w Swarzędzu">
+                            Dom&nbsp;w&nbsp;swarzędzu
                         </a>
                     </li>
                     <li class="navigation-links-list-item">
@@ -60,20 +65,20 @@
             <div class="header-contact">
                 <ul class="contact-links-list">
                     <li class="contact-links-list-item">
-                        <a class="contact-link-anchor" href="#">
+                        <a class="contact-link-anchor" href="https://www.facebook.com/DomPodPoznaniem" target="_blank">
                             <img src="/build/media/facebook-icon_white.png" alt="" class="contact-icon">
                         </a>
                     </li>
                     <li class="contact-links-list-item">
-                        <a class="contact-link-anchor" href="#" title>
+                        <a class="contact-link-anchor" href="https://m.me/DomPodPoznaniem" target="_blank">
                             <img src="/build/media/messenger-icon_white.png" alt="" class="contact-icon">
                         </a>
                     </li>
                     <li class="contact-links-list-item">
-                        <a class="contact-link-anchor" href="#">
+                        <a class="contact-link-anchor" href="tel:7307008164">
                             <img src="/build/media/phone-icon_white.png" alt="" class="contact-icon">
                             <span class="contact-phone-text">
-                                +48&nbsp;500&nbsp;500&nbsp;500
+                                +48&nbsp;730&nbsp;008&nbsp;164
                             </span>
                         </a>
                     </li>
@@ -113,6 +118,6 @@
         </div>
     </main>
 
-    <script src="/build/app.js?version=0.1"></script>
+    <script src="/build/app.js?version=0.2"></script>
 </body>
 </html>

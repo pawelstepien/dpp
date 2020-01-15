@@ -38,3 +38,12 @@ require('../media/Dom_pod_Poznaniem_lok_1.pdf');
 require('../media/Dom_pod_Poznaniem_lok_2.pdf');
 
 require('../media/contact-header.jpg');
+
+require('../media/contact-phone-icon.png');
+require('../media/contact-mail-icon.png');
+require('../media/contact-site-icon.png');
+
+require('../media/actual-about-us-header.jpg');
+require('../media/actual-about-us-phone-icon.png');
+require('../media/actual-about-us-decency-icon.png');
+require('../media/actual-about-us-advise-icon.png');

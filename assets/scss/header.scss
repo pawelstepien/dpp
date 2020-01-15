@@ -24,6 +24,10 @@
             .logo {
                 display: inline-block;
                 margin-right: pxToVw(103);
+
+                @media screen and (max-width: $small-laptop-breakpoint) {
+                    margin-right: pxToVw(90);
+                }
             }
         }
         .hamburger-wrapper {

@@ -124,3 +124,80 @@ figure {
         padding-top: $header-height * $scale-factor;
     }
 }
+.section-title {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Playfair Display', 'Tahoma', sans-serif;
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        width: 60px;
+        display: inline-block;
+        width: 60px;
+        border-top: 2px solid #000000;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 0px rgba(0,0,0,0.5); 
+        top: 50%;
+        box-sizing: border-box;
+    }
+
+    &::before {
+        transform: translate(-100%, 2px) translateX(-15px);
+    }
+    &::after {
+        transform: translate(0, 2px) translateX(15px);
+    }
+
+    @media screen and (max-width: $laptop-breakpoint) {
+        $scale-factor: 0.8;
+
+        font-size: 45px * $scale-factor;
+
+        &::before, &::after {
+            width: 60px * $scale-factor;
+        }
+        &::before {
+            transform: translate(-100%, 2px) translateX(-15px * $scale-factor);
+        }
+        &::after {
+            transform: translate(0, 2px) translateX(15px * $scale-factor);
+        }
+    }
+
+    @media screen and (max-width: $small-laptop-breakpoint) {
+        $scale-factor: 0.667;
+
+        font-size: 45px * $scale-factor;
+
+        
+        &::before, &::after {
+            width: 60px * $scale-factor;
+        }
+        &::before {
+            transform: translate(-100%, 2px) translateX(-15px * $scale-factor);
+        }
+        &::after {
+            transform: translate(0, 2px) translateX(15px * $scale-factor);
+        }
+    }
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        $scale-factor: 0.45;
+
+        font-size: 45px * $scale-factor;
+
+        
+        &::before, &::after {
+            width: 60px * $scale-factor;
+        }
+        &::before {
+            transform: translate(-100%, 2px) translateX(-15px * $scale-factor);
+        }
+        &::after {
+            transform: translate(0, 2px) translateX(15px * $scale-factor);
+        }
+    }
+}

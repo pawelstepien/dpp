@@ -39,7 +39,7 @@ export const map = () => {
 
     const initListenerOnLocationsList = () => {
         const list = document.getElementById('map-list');
-
+        if (!list) return;
         list.addEventListener('click', event => {
             console.log(event.target, event.target.dataset.query)
             changeEmbedUrl(event.target.dataset.query);
