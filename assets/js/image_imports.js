@@ -36,3 +36,5 @@ require('../media/phone-icon_footer.png');
 require('../media/mail-icon_footer.png');
 require('../media/Dom_pod_Poznaniem_lok_1.pdf');
 require('../media/Dom_pod_Poznaniem_lok_2.pdf');
+
+require('../media/contact-header.jpg');
