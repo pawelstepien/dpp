@@ -90,6 +90,8 @@
     <main id="about-us-page" class="page-main">
         <section class="section-contact-top">
             <picture>
+                <source srcset="/build/media/actual-about-us-header_mobile.jpg?version=0.0"
+                    media="(max-width: 1024px)">
                 <img class="contact-top-photo" src="/build/media/actual-about-us-header.jpg?version=0.2"> 
             </picture>
             <div class="contact-top-content">

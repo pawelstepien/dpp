@@ -90,6 +90,8 @@
     <main id="contact-page" class="page-main">
         <section class="section-contact-top">
             <picture>
+                <source srcset="/build/media/contact-header_mobile.jpg?version=0.0"
+                media="(max-width: 1024px)">
                 <img class="contact-top-photo" src="/build/media/contact-header.jpg?version=0.0"> 
             </picture>
             <div class="contact-top-content">
