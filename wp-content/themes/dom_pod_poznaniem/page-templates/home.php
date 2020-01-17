@@ -90,6 +90,8 @@
     <main id="home-page" class="page-main">
         <div class="home-page-house-wrapper" id="home-page-house-wrapper">
             <picture class="home-page-house" id="home-page-house">
+                <source srcset="/build/media/home-page-parallax-house.jpg?version=0.0"
+                media="(min-aspect-ratio: 2/1)">
                 <img src="/build/media/home-page-house.jpg" alt="Dom z zewnątrz">
             </picture>
         </div>
