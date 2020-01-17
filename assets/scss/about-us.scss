@@ -116,6 +116,10 @@
                 }
             }
             .benefit-text-wrapper {
+                @media screen and (min-width: $tablet-breakpoint + 1px) {
+                    max-width: calc(100% - 76px); //safari <= 9 fix
+                }
+                
                 .benefit-title {
                     color: $green;
                     font-size: 19px;

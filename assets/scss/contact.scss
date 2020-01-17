@@ -67,6 +67,7 @@
 
         @media screen and (max-width: $tablet-breakpoint) {
             flex-direction: column;
+            flex-basis: auto;
         }
 
         .contact-anchor {
@@ -78,6 +79,10 @@
             text-decoration: none;
             margin: 24px 0;
             flex-basis: 50%;
+
+            @media screen and (max-width: $tablet-breakpoint) {
+                flex-basis: auto;
+            }   
             
             .contact-icon {
                 margin-right: 15px;

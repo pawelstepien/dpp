@@ -110,31 +110,31 @@
         <section class="section-contact-icons">
             <div class="contact-icons-wrapper">
                 <a href="tel:7307008164" class="contact-anchor">
-                    <img src="/build/media/contact-phone-icon.png" alt="Telefon" class="contact-icon">
+                    <img src="/build/media/contact-phone-icon.png?version=0.3" alt="Telefon" class="contact-icon">
                     <span class="contact-text">
                         +&nbsp;48&nbsp;730&nbsp;008&nbsp;164
                     </span>
                 </a>
                 <a href="mailto:test@test.test" class="contact-anchor">
-                    <img src="/build/media/contact-mail-icon.png" alt="Telefon" class="contact-icon">
+                    <img src="/build/media/contact-mail-icon.png?version=0.3" alt="Telefon" class="contact-icon">
                     <span class="contact-text">
                         biuro@dompodpoznaniem.pl
                     </span>
                 </a>
                 <a href="https://www.facebook.com/DomPodPoznaniem" class="contact-anchor" target="_blank">
-                    <img src="/build/media/contact-facebook-icon.png" alt="Facebook" class="contact-icon">
+                    <img src="/build/media/contact-facebook-icon.png?version=0.3" alt="Facebook" class="contact-icon">
                     <span class="contact-text">
                         facebook
                     </span>
                 </a>
                 <a href="https://m.me/DomPodPoznaniem" class="contact-anchor" target="_blank">
-                    <img src="/build/media/contact-messenger-icon.png" alt="Messenger" class="contact-icon">
+                    <img src="/build/media/contact-messenger-icon.png?version=0.3" alt="Messenger" class="contact-icon">
                     <span class="contact-text">
                         messenger
                     </span>
                 </a>
                 <a href="//www.dompodpoznaniem.pl" class="contact-anchor" target="_blank">
-                    <img src="/build/media/contact-site-icon.png" alt="Strona" class="contact-icon">
+                    <img src="/build/media/contact-site-icon.png?version=0.3" alt="Strona" class="contact-icon">
                     <span class="contact-text">
                         www.dompodpoznaniem.pl
                     </span>

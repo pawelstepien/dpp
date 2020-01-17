@@ -867,10 +867,10 @@
                     top: 45%;
                     width: 30px * $scale-factor;
                     &.slider-arrow_left {
-                        left: -40px;
+                        left: -30px;
                     }
                     &.slider-arrow_right {
-                        right: -40px;
+                        right: -30px;
                     }
                 }
     
@@ -880,10 +880,10 @@
                     top: 50%;
                     width: 30px * $scale-factor;
                     &.slider-arrow_left {
-                        left: -5px;
+                        left: -2px;
                     }
                     &.slider-arrow_right {
-                        right: -5px;
+                        right: -2px;
                     }
                 }
                 @media screen and (max-width: 440px) {
@@ -940,11 +940,13 @@
                 }
 
                 &:hover {
-                    &::before {
-                        opacity: 0.63;
-                    } 
-                    &::after {
-                        opacity: 1;
+                    @media screen and (min-width: $tablet-breakpoint + 1px) {
+                        &::before {
+                            opacity: 0.63;
+                        } 
+                        &::after {
+                            opacity: 1;
+                        }
                     }
                 }
 
