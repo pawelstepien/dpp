@@ -42,6 +42,8 @@ require('../media/contact-header_mobile.jpg');
 
 require('../media/contact-phone-icon.png');
 require('../media/contact-mail-icon.png');
+require('../media/contact-facebook-icon.png');
+require('../media/contact-messenger-icon.png');
 require('../media/contact-site-icon.png');
 
 require('../media/actual-about-us-header.jpg');

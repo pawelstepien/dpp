@@ -14,7 +14,7 @@
     </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="/build/app.css?version=0.2" rel="stylesheet">
+    <link href="/build/app.css?version=0.3" rel="stylesheet">
     <title>O nas - Dom Pod Poznaniem</title>
 </head>
 
@@ -92,7 +92,7 @@
             <picture>
                 <source srcset="/build/media/actual-about-us-header_mobile.jpg?version=0.0"
                     media="(max-width: 1024px)">
-                <img class="contact-top-photo" src="/build/media/actual-about-us-header.jpg?version=0.2"> 
+                <img class="contact-top-photo" src="/build/media/actual-about-us-header.jpg?version=0.3"> 
             </picture>
             <div class="contact-top-content">
                 <h1 class="section-title">
@@ -122,7 +122,7 @@
 
             <article class="benefit-wrapper">
                 <figure class="benefit-icon-wrapper">
-                    <img class="benefit-icon" src="/build/media/actual-about-us-phone-icon.png?version=0.2"> 
+                    <img class="benefit-icon" src="/build/media/actual-about-us-phone-icon.png?version=0.3"> 
                 </figure>
                 <div class="benefit-text-wrapper">
                     <h5 class="benefit-title">
@@ -136,7 +136,7 @@
 
             <article class="benefit-wrapper">
                 <figure class="benefit-icon-wrapper">
-                    <img class="benefit-icon" src="/build/media/actual-about-us-decency-icon.png?version=0.2"> 
+                    <img class="benefit-icon" src="/build/media/actual-about-us-decency-icon.png?version=0.3"> 
                 </figure>
                 <div class="benefit-text-wrapper">
                     <h5 class="benefit-title">
@@ -152,7 +152,7 @@
 
             <article class="benefit-wrapper">
                 <figure class="benefit-icon-wrapper">
-                    <img class="benefit-icon" src="/build/media/actual-about-us-advise-icon.png?version=0.2"> 
+                    <img class="benefit-icon" src="/build/media/actual-about-us-advise-icon.png?version=0.3"> 
                 </figure>
                 <div class="benefit-text-wrapper">
                     <h5 class="benefit-title">
@@ -193,6 +193,6 @@
         </div>
     </footer>
 
-    <script src="/build/app.js?version=0.2"></script>
+    <script src="/build/app.js?version=0.3"></script>
 </body>
 </html>

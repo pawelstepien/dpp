@@ -14,7 +14,7 @@
     </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="/build/app.css?version=0.2" rel="stylesheet">
+    <link href="/build/app.css?version=0.3" rel="stylesheet">
     <title>Dom w Swarzędzu - Dom Pod Poznaniem</title>
 </head>
 
@@ -592,6 +592,6 @@
     <img src="" alt="" id="popup-image">
     </div>
 
-    <script src="/build/app.js?version=0.2"></script>
+    <script src="/build/app.js?version=0.3"></script>
 </body>
 </html>

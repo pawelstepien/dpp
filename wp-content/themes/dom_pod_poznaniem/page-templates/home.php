@@ -14,7 +14,7 @@
     </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="/build/app.css?version=0.2" rel="stylesheet">
+    <link href="/build/app.css?version=0.3" rel="stylesheet">
     <title>Dom Pod Poznaniem</title>
 </head>
 
@@ -90,7 +90,7 @@
     <main id="home-page" class="page-main">
         <div class="home-page-house-wrapper" id="home-page-house-wrapper">
             <picture class="home-page-house" id="home-page-house">
-                <img src="/build/media/home-page-parallax-house.jpg" alt="Dom z zewnątrz">
+                <img src="/build/media/home-page-house.jpg" alt="Dom z zewnątrz">
             </picture>
         </div>
         <div class="home-page-content">
@@ -109,7 +109,7 @@
                     Komfortowe rozwiązania funkcjonalne  w połączeniu 
                     z&nbsp;najlepszymi rozwiązaniami technicznymi i najwyższej klasy materiałami. 
                 </p>
-                <a href="/o-nas" title="Dowiedz się więcej">
+                <a href="/dom-w-swarzedzu" title="Dowiedz się więcej">
                     <button class="button">
                         <span class="button-text">Dowiedz się więcej</span>
                     </button>
@@ -118,6 +118,6 @@
         </div>
     </main>
 
-    <script src="/build/app.js?version=0.2"></script>
+    <script src="/build/app.js?version=0.3"></script>
 </body>
 </html>

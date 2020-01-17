@@ -14,7 +14,7 @@
     </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="/build/app.css?version=0.2" rel="stylesheet">
+    <link href="/build/app.css?version=0.3" rel="stylesheet">
     <title>Kontakt - Dom Pod Poznaniem</title>
 </head>
 
@@ -121,7 +121,19 @@
                         biuro@dompodpoznaniem.pl
                     </span>
                 </a>
-                <a href="www.dompodpoznaniem.pl" class="contact-anchor">
+                <a href="https://www.facebook.com/DomPodPoznaniem" class="contact-anchor" target="_blank">
+                    <img src="/build/media/contact-facebook-icon.png" alt="Facebook" class="contact-icon">
+                    <span class="contact-text">
+                        facebook
+                    </span>
+                </a>
+                <a href="https://m.me/DomPodPoznaniem" class="contact-anchor" target="_blank">
+                    <img src="/build/media/contact-messenger-icon.png" alt="Messenger" class="contact-icon">
+                    <span class="contact-text">
+                        messenger
+                    </span>
+                </a>
+                <a href="//www.dompodpoznaniem.pl" class="contact-anchor" target="_blank">
                     <img src="/build/media/contact-site-icon.png" alt="Strona" class="contact-icon">
                     <span class="contact-text">
                         www.dompodpoznaniem.pl
@@ -181,6 +193,6 @@
         </section>
     </main>
 
-    <script src="/build/app.js?version=0.2"></script>
+    <script src="/build/app.js?version=0.3"></script>
 </body>
 </html>
