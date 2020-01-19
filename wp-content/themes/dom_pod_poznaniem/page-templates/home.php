@@ -19,101 +19,41 @@
 </head>
 
 <body>
-<header id="header">
-        <div class="header-left">
-            <a href="/home" class="logo-anchor">
-                <picture class="logo">
-                    <img src="/build/media/logo.png" alt="logo">
-                </picture>
-            </a>
 
-            <nav id="navigation">
-                <ul class="navigation-links-list" id="navigation-links-list">
-                    <li class="navigation-links-list-item">
-                        <a class="navigation-link-anchor" href="/home" title="Home">
-                            Home
-                        </a>
-                    </li>
-                    <li class="navigation-links-list-item">
-                        <a class="navigation-link-anchor" href="/dom-w-swarzedzu" title="Dom w Swarzędzu">
-                            Dom&nbsp;w&nbsp;swarzędzu
-                        </a>
-                    </li>
-                    <li class="navigation-links-list-item">
-                        <a class="navigation-link-anchor" href="/o-nas" title="O nas">
-                            O&nbsp;nas
-                        </a>
-                    </li>
-                    <li class="navigation-links-list-item">
-                        <a class="navigation-link-anchor" href="/kontakt" title="Kontakt">
-                            Kontakt
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-
-            <div class="hamburger-wrapper">
-                <div id="hamburger">
-                    <div class="hamburger-line" id="hamburger-line_1"></div>
-                    <div class="hamburger-line" id="hamburger-line_2"></div>
-                    <div class="hamburger-line" id="hamburger-line_3"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="header-right">
-            <div class="header-contact">
-                <ul class="contact-links-list">
-                    <li class="contact-links-list-item">
-                        <a class="contact-link-anchor" href="https://www.facebook.com/DomPodPoznaniem" target="_blank">
-                            <img src="/build/media/facebook-icon_white.png" alt="" class="contact-icon">
-                        </a>
-                    </li>
-                    <li class="contact-links-list-item">
-                        <a class="contact-link-anchor" href="https://m.me/DomPodPoznaniem" target="_blank">
-                            <img src="/build/media/messenger-icon_white.png" alt="" class="contact-icon">
-                        </a>
-                    </li>
-                    <li class="contact-links-list-item">
-                        <a class="contact-link-anchor" href="tel:7307008164">
-                            <img src="/build/media/phone-icon_white.png" alt="" class="contact-icon">
-                            <span class="contact-phone-text">
-                                +48&nbsp;730&nbsp;008&nbsp;164
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <?php get_template_part( 'template-parts/menu' ); ?>
 
     <main id="home-page" class="page-main">
         <div class="home-page-house-wrapper" id="home-page-house-wrapper">
             <picture class="home-page-house" id="home-page-house">
-                <source srcset="/build/media/home-page-parallax-house.jpg?version=0.0"
+                <source srcset="<?= get_field( 'home-page-photo_wide' )['url']?>?version=0.0"
                 media="(min-aspect-ratio: 2/1)">
-                <img src="/build/media/home-page-house.jpg" alt="Dom z zewnątrz">
+                <source srcset="<?= get_field( 'home-page-photo_mobile' )['url']?>?version=0.0"
+                media="(max-width: 600px)">
+                <img src="<?= get_field( 'home-page-photo' )['url']?>?version=0.0" alt="Dom z zewnątrz">
             </picture>
         </div>
         <div class="home-page-content">
             <div class="home-page-content-wrapper">
                 <p class="home-page-title-predecessor">
-                    Aktualnie w sprzedaży
+                    <?= get_field( 'home-page-title-predecessor' ) ?>
                 </p>
+                <!-- <h1 class="title home-page-title">
+                    <b><?= get_field( 'home-page-title-first-line' ) ?></b><br>
+                    <?= get_field( 'home-page-title-second-line' ) ?>
+                    <div class="horizontal-line horizontal-line_bellow"></div>
+                </h1> -->
                 <h1 class="title home-page-title">
-                    <b>
-                        Unikatowy dom<br>
-                    </b>
-                    w Swarzędzu
+                    <?= get_field( 'home-page-title' ) ?>
                     <div class="horizontal-line horizontal-line_bellow"></div>
                 </h1>
                 <p class="home-page-paragraph">
-                    Komfortowe rozwiązania funkcjonalne  w połączeniu 
-                    z&nbsp;najlepszymi rozwiązaniami technicznymi i najwyższej klasy materiałami. 
+                    <?= get_field( 'home-page-paragraph' ) ?>
                 </p>
-                <a href="/dom-w-swarzedzu" title="Dowiedz się więcej">
+                <a href="/dom-w-swarzedzu" title="<?= get_field( 'home-page- button-text' ) ?>">
                     <button class="button">
-                        <span class="button-text">Dowiedz się więcej</span>
+                        <span class="button-text">
+                            <?= get_field( 'home-page-button-text' ) ?>
+                        </span>
                     </button>
                 </a>
             </div>
