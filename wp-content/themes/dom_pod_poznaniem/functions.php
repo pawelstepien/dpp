@@ -6,4 +6,12 @@ function my_acf_add_local_field_groups() {
 }
 add_action('acf/init', 'my_acf_add_local_field_groups');
 
+function format_phone($phone) {
+    if (strlen( $phone ) != 9 ) {
+        return $phone;
+    }
+    $result = '+48&nbsp;' . substr( $phone, 0, 3 ) . '&nbsp;' . substr( $phone, 3, 3 ) . '&nbsp;' . substr( $phone, 6, 3 );
+    return $result;
+}
+
 ?>

@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="/build/app.css?version=0.3" rel="stylesheet">
-    <title>Kontakt - Dom Pod Poznaniem</title>
+    <title><?= get_the_title() ?> - Dom Pod Poznaniem</title>
 </head>
 
 <body>
@@ -31,7 +31,7 @@
             </picture>
             <div class="contact-top-content">
                 <h1 class="section-title">
-                    Kontakt
+                    <?= get_the_title() ?>
                 </h1>
                 <p class="contact-top-content-text">
                 Jesteśmy do Państwa dyspozycji od poniedziałku do piątku 

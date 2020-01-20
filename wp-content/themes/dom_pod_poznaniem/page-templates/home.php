@@ -25,10 +25,17 @@
     <main id="home-page" class="page-main">
         <div class="home-page-house-wrapper" id="home-page-house-wrapper">
             <picture class="home-page-house" id="home-page-house">
+
+                <?php if ( get_field( 'home-page-photo_mobile' ) ) { ?>
                 <source srcset="<?= get_field( 'home-page-photo_wide' )['url']?>?version=0.0"
                 media="(min-aspect-ratio: 2/1)">
+                <?php } ?>
+
+                <?php if ( get_field( 'home-page-photo_mobile' ) ) { ?>
                 <source srcset="<?= get_field( 'home-page-photo_mobile' )['url']?>?version=0.0"
                 media="(max-width: 600px)">
+                <?php } ?>
+
                 <img src="<?= get_field( 'home-page-photo' )['url']?>?version=0.0" alt="Dom z zewnątrz">
             </picture>
         </div>
@@ -37,11 +44,6 @@
                 <p class="home-page-title-predecessor">
                     <?= get_field( 'home-page-title-predecessor' ) ?>
                 </p>
-                <!-- <h1 class="title home-page-title">
-                    <b><?= get_field( 'home-page-title-first-line' ) ?></b><br>
-                    <?= get_field( 'home-page-title-second-line' ) ?>
-                    <div class="horizontal-line horizontal-line_bellow"></div>
-                </h1> -->
                 <h1 class="title home-page-title">
                     <?= get_field( 'home-page-title' ) ?>
                     <div class="horizontal-line horizontal-line_bellow"></div>
@@ -49,7 +51,7 @@
                 <p class="home-page-paragraph">
                     <?= get_field( 'home-page-paragraph' ) ?>
                 </p>
-                <a href="/dom-w-swarzedzu" title="<?= get_field( 'home-page- button-text' ) ?>">
+                <a href="/dom-w-swarzedzu" title="<?= get_field( 'home-page-button-text' ) ?>">
                     <button class="button">
                         <span class="button-text">
                             <?= get_field( 'home-page-button-text' ) ?>
