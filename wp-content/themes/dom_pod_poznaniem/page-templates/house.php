@@ -25,12 +25,14 @@
     <main id="house-page" class="page-main">
         <section class="section-about-us-top">
             <picture>
-                <img class="about-us-top-photo" src="/build/media/about-us-top-house.jpg?version=0.0"> 
+                <img class="about-us-top-photo" src="<?= get_field( 'header-image' )['url'] ?>?version=0.0"> 
+                <!-- <img class="about-us-top-photo" src="/build/media/about-us-top-house.jpg?version=0.0">  -->
             </picture>
             <div class="about-us-top-content">
                 <div class="horizontal-line"></div>
                 <p class="about-us-top-content-text">
-                    Oto idealny dom dla Ciebie w standardzie Premium zlokalizowany na kameralny willowym osiedlu w Swarzędzu. Doskonałe połączenie lokalizacji, pięknej nowoczesnej architektury, oraz najwyższego standardu budownictwa.
+                    <?= get_field( 'header-text' ) ?>
+                    <!-- Oto idealny dom dla Ciebie w standardzie Premium zlokalizowany na kameralny willowym osiedlu w Swarzędzu. Doskonałe połączenie lokalizacji, pięknej nowoczesnej architektury, oraz najwyższego standardu budownictwa. -->
                 </p>
             </div>
 
@@ -38,7 +40,16 @@
                 <ul class="about-us-top-features-list">
 
                     <li class="about-us-feature">
+                        <?php $icon = get_field( 'feature-icon_1' );?>
                         <figure class="about-us-feature-figure">
+                            <div class="feature-icon-wrapper">
+                                <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>" class="feature-icon">
+                            </div>
+                            <figcaption class="feature-icon-text">
+                                <?= $icon['caption'] ?>
+                            </figcaption>
+                        </figure>
+                        <!-- <figure class="about-us-feature-figure">
                             <div class="feature-icon-wrapper">
                                 <img src="/build/media/feature-icon_1.png" alt="Powierzchnia" class="feature-icon">
                             </div>
@@ -46,7 +57,7 @@
                                 144&nbsp;m<sup>2</sup><br>
                                 powierzchni
                             </figcaption>
-                        </figure>
+                        </figure> -->
                     </li>
 
                     <li class="about-us-feature">

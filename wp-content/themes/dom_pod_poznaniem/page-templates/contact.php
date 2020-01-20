@@ -34,44 +34,46 @@
                     <?= get_the_title() ?>
                 </h1>
                 <p class="contact-top-content-text">
-                Jesteśmy do Państwa dyspozycji od poniedziałku do piątku 
+                <?= format_phone( get_field( 'header-text' ) ) ?>
+                <!-- Jesteśmy do Państwa dyspozycji od poniedziałku do piątku 
                 w&nbsp;godzinach od 8.00 do 17.00.<br>
                 Istnieje możliwość spotkania poza godzinami pracy oraz w sobotę
-                po&nbsp;wcześniejszym uzgodnieniu telefonicznym.
+                po&nbsp;wcześniejszym uzgodnieniu telefonicznym. -->
                 </p>
             </div>
         </section>
 
         <section class="section-contact-icons">
             <div class="contact-icons-wrapper">
-                <a href="tel:7307008164" class="contact-anchor">
+                <a href="tel:<?= get_field( 'phone' ) ?>" class="contact-anchor">
                     <img src="/build/media/contact-phone-icon.png?version=0.3" alt="Telefon" class="contact-icon">
                     <span class="contact-text">
-                        +&nbsp;48&nbsp;730&nbsp;008&nbsp;164
+                        <?= format_phone( get_field( 'phone' ) ) ?>
+                        <!-- +&nbsp;48&nbsp;730&nbsp;008&nbsp;164 -->
                     </span>
                 </a>
-                <a href="mailto:test@test.test" class="contact-anchor">
-                    <img src="/build/media/contact-mail-icon.png?version=0.3" alt="Telefon" class="contact-icon">
+                <a href="mailto:<?= get_field( 'email' ) ?>" class="contact-anchor">
+                    <img src="/build/media/contact-mail-icon.png?version=0.3" alt="e-mail" class="contact-icon">
                     <span class="contact-text">
-                        biuro@dompodpoznaniem.pl
+                        <?= get_field( 'email' ) ?>
                     </span>
                 </a>
-                <a href="https://www.facebook.com/DomPodPoznaniem" class="contact-anchor" target="_blank">
+                <a href="<?= get_field( 'facebook' ) ?>" class="contact-anchor" target="_blank">
                     <img src="/build/media/contact-facebook-icon.png?version=0.3" alt="Facebook" class="contact-icon">
                     <span class="contact-text">
                         facebook
                     </span>
                 </a>
-                <a href="https://m.me/DomPodPoznaniem" class="contact-anchor" target="_blank">
+                <a href="<?= get_field( 'messenger' ) ?>" class="contact-anchor" target="_blank">
                     <img src="/build/media/contact-messenger-icon.png?version=0.3" alt="Messenger" class="contact-icon">
                     <span class="contact-text">
                         messenger
                     </span>
                 </a>
-                <a href="//www.dompodpoznaniem.pl" class="contact-anchor" target="_blank">
+                <a href="//<?= get_field( 'page-url' ) ?>" class="contact-anchor" target="_blank">
                     <img src="/build/media/contact-site-icon.png?version=0.3" alt="Strona" class="contact-icon">
                     <span class="contact-text">
-                        www.dompodpoznaniem.pl
+                        <?= get_field( 'page-url' ) ?>
                     </span>
                 </a>
             </div>
@@ -82,26 +84,47 @@
                 <div class="inputs-wrapper">
                     <div class="input-wrapper">
                         <label for="input-name" class="contact-label">
-                            Imię i nazwisko*
+                            <?= get_field( 'form-input_1' ) ?>
+                            <!-- Imię i nazwisko* -->
                         </label>
                         <input type="text" name="name" id="input-name" class="contact-input" required>
                     </div>
         
                     <div class="input-wrapper">
                         <label for="input-mail" class="contact-label">
-                            Adres e-mail*
+                            <?= get_field( 'form-input_1' ) ?>
+                            <!-- Adres e-mail* -->
                         </label>
                         <input type="email" name="mail" id="input-mail" class="contact-input" required>
                     </div>
                 </div>
+                <?php if ( get_field( 'form-input_3' ) ) {?>
+                <div class="inputs-wrapper">
+                    <div class="input-wrapper">
+                        <label for="form-input_3" class="contact-label">
+                            <?= get_field( 'form-input_3' ) ?>
+                        </label>
+                        <input type="text" name="form-input_3" id="form-input_3" class="contact-input" <?= strpos(get_field( 'form-input_3' ), '*') !== false ? 'required' : '' ?>>
+                    </div>
+                    <?php if ( get_field( 'form-input_4' ) ) {?>
+                    <div class="input-wrapper">
+                        <label for="form-input_4" class="contact-label">
+                            <?= get_field( 'form-input_4' ) ?>
+                        </label>
+                        <input type="text" name="form-input_4" id="form-input_4" class="contact-input" <?= strpos(get_field( 'form-input_4' ), '*') !== false ? 'required' : '' ?>>
+                    </div>
+                    <?php } ?>
+                </div>
+                <?php } ?>
     
                 <label for="input-message" class="contact-label">
-                    Treść wiadomości*
+                    <?= get_field( 'form-textarea' ) ?>
                 </label>
                 <textarea name="message" id="" required id="input-message" class="contact-input contact-textarea"></textarea>
 
                 <p class="contact-disclaimer">
-                    * pola wymagane
+                    <?= get_field( 'form-disclaimer' ) ?>
+                    <!-- * pola wymagane -->
                 </p>
 
                 <div class="consent-wrapper">
@@ -110,9 +133,10 @@
                         <div class="checkmark"></div>
                     </label>
                     <p class="consent-text">
-                        Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w związku z realizacją zgłoszenia. Podanie danych jest dobrowolne, ale niezbędne do
+                        <?= get_field( 'form-consent' ) ?>
+                        <!-- Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w związku z realizacją zgłoszenia. Podanie danych jest dobrowolne, ale niezbędne do
                         przetworzenia zapytania. Zostałem /am poinformowany /a, że przysługuje mi prawo dostępu do swoich danych, możliwości ich poprawiania oraz żądania zaprzestania ich przetwarzania. 
-                        Administratorem danych osobowych jest Dom pod Poznaniem.
+                        Administratorem danych osobowych jest Dom pod Poznaniem. -->
                     </p>
                 </div>
 

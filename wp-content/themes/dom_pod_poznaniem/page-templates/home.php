@@ -51,7 +51,7 @@
                 <p class="home-page-paragraph">
                     <?= get_field( 'home-page-paragraph' ) ?>
                 </p>
-                <a href="/dom-w-swarzedzu" title="<?= get_field( 'home-page-button-text' ) ?>">
+                <a href="<?= get_field( 'button-link' ) ?>" title="<?= get_field( 'home-page-button-text' ) ?>">
                     <button class="button">
                         <span class="button-text">
                             <?= get_field( 'home-page-button-text' ) ?>

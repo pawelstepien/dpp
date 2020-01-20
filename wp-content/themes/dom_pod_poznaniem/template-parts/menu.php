@@ -33,20 +33,20 @@
             <div class="header-contact">
                 <ul class="contact-links-list">
                     <li class="contact-links-list-item">
-                        <a class="contact-link-anchor" href="https://www.facebook.com/DomPodPoznaniem" target="_blank">
+                        <a class="contact-link-anchor" href="<?= get_field( 'facebook' ) ?>" target="_blank">
                             <img src="/build/media/facebook-icon_white.png" alt="" class="contact-icon">
                         </a>
                     </li>
                     <li class="contact-links-list-item">
-                        <a class="contact-link-anchor" href="https://m.me/DomPodPoznaniem" target="_blank">
+                        <a class="contact-link-anchor" href="<?= get_field( 'messenger' ) ?>" target="_blank">
                             <img src="/build/media/messenger-icon_white.png" alt="" class="contact-icon">
                         </a>
                     </li>
                     <li class="contact-links-list-item">
-                        <a class="contact-link-anchor" href="tel:7307008164">
+                        <a class="contact-link-anchor" href="tel:<?= get_field( 'phone' ) ?>">
                             <img src="/build/media/phone-icon_white.png" alt="" class="contact-icon">
                             <span class="contact-phone-text">
-                                +48&nbsp;730&nbsp;008&nbsp;164
+                            <?= format_phone( get_field( 'phone' ) ) ?>
                             </span>
                         </a>
                     </li>
