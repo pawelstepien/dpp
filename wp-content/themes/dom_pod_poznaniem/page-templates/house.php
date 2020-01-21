@@ -26,21 +26,23 @@
         <section class="section-about-us-top">
             <picture>
                 <img class="about-us-top-photo" src="<?= get_field( 'header-image' )['url'] ?>?version=0.0"> 
-                <!-- <img class="about-us-top-photo" src="/build/media/about-us-top-house.jpg?version=0.0">  -->
             </picture>
             <div class="about-us-top-content">
                 <div class="horizontal-line"></div>
                 <p class="about-us-top-content-text">
                     <?= get_field( 'header-text' ) ?>
-                    <!-- Oto idealny dom dla Ciebie w standardzie Premium zlokalizowany na kameralny willowym osiedlu w Swarzędzu. Doskonałe połączenie lokalizacji, pięknej nowoczesnej architektury, oraz najwyższego standardu budownictwa. -->
                 </p>
             </div>
 
             <div class="about-us-top-features">
                 <ul class="about-us-top-features-list">
 
+                    <?php 
+                    for ($i = 1; $i <= 12; $i++) { 
+                    $icon = get_field( ('feature-icon_' . $i) );
+                    if (!$icon) { continue; }
+                    ?>
                     <li class="about-us-feature">
-                        <?php $icon = get_field( 'feature-icon_1' );?>
                         <figure class="about-us-feature-figure">
                             <div class="feature-icon-wrapper">
                                 <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>" class="feature-icon">
@@ -49,110 +51,8 @@
                                 <?= $icon['caption'] ?>
                             </figcaption>
                         </figure>
-                        <!-- <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_1.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                144&nbsp;m<sup>2</sup><br>
-                                powierzchni
-                            </figcaption>
-                        </figure> -->
                     </li>
-
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_2.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Cztery <br>
-                                sypialnie
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_3.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Dwie <br>
-                                łazienki
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_4.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                600&nbsp;m<sup>2</sup><br>
-                                powierzchni działki
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_5.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Taras
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_6.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Garaż + <br>
-                                miejsca postojowe
-                            </figcaption>
-                        </figure>
-                    </li>
-                    
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_7.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Oświetlona <br>
-                                droga dojazdowa
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_8.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Sąsiedztwo <br>
-                                terenów zielonych
-                            </figcaption>
-                        </figure>
-                    </li>
-
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_9.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Kanalizacja
-                            </figcaption>
-                        </figure>
-                    </li>
+                    <?php } ?>
 
                 </ul>
             </div>
@@ -160,172 +60,94 @@
 
         <section class="section-about-us-download-plan">
             <picture class="download-plan-house">
-                <img src="/build/media/about-us-download-plan-house.jpg" alt="Dom Pod Poznaniem">
+                <img src="<?= get_field( 'download-photo' )['url'] ?>" alt="<?= get_field( 'download-photo' )['alt'] ?>">
             </picture>
-            <a href="/build/media/Dom_pod_Poznaniem_lok_1.pdf" download class="download-plan-anchor">
+            <?php if (get_field( 'download-file_1' )) { ?>
+            <a href="<?= get_field( 'download-file_1' )['url'] ?>" download class="download-plan-anchor">
                 <button class="download-plan-button button">
                     <span class="button-text">
-                        Pobierz kartę lokalu 1
-                        <img src="/build/media/download-icon.png" alt="Pobierz plan lokalu" class="download-icon">
+                        <?= get_field( 'download-button_1' ) ?>
+                        <img src="<?= get_field( 'download-icon' )['url'] ?>" alt="<?= get_field( 'download-icon' )['alt'] ?>" class="download-icon">
                     </span>
                 </button>
             </a>
-            <a href="/build/media/Dom_pod_Poznaniem_lok_2.pdf" download class="download-plan-anchor">
+            <?php } ?>
+            <?php if (get_field( 'download-file_2' )) { ?>
+            <a href="<?= get_field( 'download-file_2' )['url'] ?>" download class="download-plan-anchor">
                 <button class="download-plan-button button">
                     <span class="button-text">
-                        Pobierz kartę lokalu 2
-                        <img src="/build/media/download-icon.png" alt="Pobierz plan lokalu" class="download-icon">
+                        <?= get_field( 'download-button_2' ) ?>
+                        <img src="<?= get_field( 'download-icon' )['url'] ?>" alt="<?= get_field( 'download-icon' )['alt'] ?>" class="download-icon">
                     </span>
                 </button>
             </a>
+            <?php } ?>
         </section>
 
         <section class="section-about-us-interior">
             <h2 class="section-title">
-                Wnętrze
+                <?= get_field( 'interior-title' ) ?>
             </h2>
-            
+
+            <?php 
+            for ($i = 1; $i <= 4; $i++) { 
+            $photo = get_field( ('interior-photo_' . $i) );
+            if (!$photo) { continue; }
+            ?>
             <figure class="about-us-interior-figure">
                 <picture class="about-us-interior-photo">
-                    <img src="/build/media/about-us-interior_1.jpg" alt="Kuchnia">
+                    <img src="<?= $photo['url'] ?>" alt="<?= $photo['alt'] ?>">
                 </picture>
 
                 <figcaption class="interior-content">
                     <h3 class="interior-content-title">
-                        Kuchnia
+                        <?= $photo['caption'] ?>
                         <div class="horizontal-line horizontal-line_bellow">
                     </h3>
                     <p class="interior-content-paragraph">
-                        Duża przestrzeń i szerokość kuchni umożliwia montaż wyspy kuchennej lub barku 
-                        z&nbsp;siedziskami idealnymi do porannych rozmów przy kubku ciepłej kawy. Dodatkowym atutem kuchni jest możliwość jej aranżacji na różne sposoby, od wydzielonej kuchni aż po kuchnię otwartą z przynależną jadalnią. 
+                        <?= $photo['description'] ?>
                     </p>
                 </figcaption>
             </figure>
+            <?php } ?>
 
-            <figure class="about-us-interior-figure">
-                <picture class="about-us-interior-photo">
-                    <img src="/build/media/about-us-interior_2.jpg" alt="Kuchnia">
-                </picture>
-
-                <figcaption class="interior-content">
-                    <h3 class="interior-content-title">
-                        Salon
-                        <div class="horizontal-line horizontal-line_bellow">
-                    </h3>
-                    <p class="interior-content-paragraph">
-                        Cześć reprezentacyjna to przestrony salon z panoramicznymi oknami, które zapewniają&nbsp;doskonałe doświetlenie oraz widok na przydomową zieleń i taras.
-                    </p>
-                </figcaption>
-            </figure>
         </section>
 
         <section class="section-about-us-architecture">
             <h2 class="section-title">
-                Architektura
+                <?= get_field( 'architecture-title' ) ?>
             </h2>
 
             <picture class="about-us-architecture-house">
-                <img src="/build/media/about-us-architecture.jpg?version=0.0" alt="Dom Pod Poznaniem">
+                <img src="<?= get_field( 'architecture-photo' )['url'] ?>" alt="<?= get_field( 'architecture-photo' )['alt'] ?>">
             </picture>
 
             <div class="about-us-architecture-content">
                 <div class="horizontal-line"></div>
                 <p class="about-us-architecture-content-text">
-                    Oto idealny dom dla Ciebie w standardzie Premium zlokalizowany na kameralny willowym osiedlu w Swarzędzu. Doskonałe połączenie lokalizacji, pięknej nowoczesnej architektury, oraz najwyższego standardu budownictwa.
+                    <?= get_field( 'achitecture-text' ) ?>
                 </p>
             </div>
 
             <div class="about-us-architecture-features">
                 <ul class="about-us-architecture-features-list">
 
+                    <?php 
+                    for ($i = 1; $i <= 12; $i++) { 
+                    $icon = get_field( ('architecture-icon_' . $i) );
+                    if (!$icon) { continue; }
+                    ?>
                     <li class="about-us-feature">
                         <figure class="about-us-feature-figure">
                             <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_10.png" alt="Powierzchnia" class="feature-icon">
+                                <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>" class="feature-icon">
                             </div>
                             <figcaption class="feature-icon-text">
-                                Dwukolorowa<br>
-                                elewacja
+                                <?= $icon['caption'] ?>
                             </figcaption>
                         </figure>
                     </li>
-                    
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_11.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Stylowa kostka<br>
-                                brukowa
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_12.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Egzotyczne deski<br>
-                                elewacyjne Garapa
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_13.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Nowoczesna płaska<br>
-                                dachówka
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_14.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Rolety zewnątrzne<br>
-                                w oknach
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_15.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Nasłonecznienie<br>
-                                z trzech stron świata
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_16.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Duże okna<br>
-                                w pomieszczeniach
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_17.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Przestronny balkon
-                            </figcaption>
-                        </figure>
-                    </li>
+                    <?php } ?>
 
                 </ul>
             </div>
@@ -333,78 +155,45 @@
 
         <section class="section-about-us-energy-saving">
             <h2 class="section-title">
-                Energooszczędność
+                <?= get_field( 'energy-savings-title' ) ?>
             </h2>
             <p class="about-us-energy-saving-paragraph">
-                To nasz priorytet, dlatego zastosowaliśmy szereg rozwiązań nie widocznych
-                na pierwszy rzut oka, które istotnie obniżą zużycie energii i koszty ogrzewania
-                 Twojego domu.
+                <?= get_field( 'energy-savings-text' ) ?>
             </p>
 
             <div class="about-us-energy-saving-features">
                 <ul class="about-us-energy-saving-features-list">
 
+                <?php 
+                    for ($i = 1; $i <= 8; $i++) { 
+                    $icon = get_field( ('energy-savings-icon_' . $i) );
+                    if (!$icon) { continue; }
+                    ?>
+
                     <li class="about-us-feature">
                         <figure class="about-us-feature-figure">
                             <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_18.png" alt="Powierzchnia" class="feature-icon">
+                                <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>" class="feature-icon">
                             </div>
                             <figcaption class="feature-icon-text">
-                                Okna trzy szybowe,<br>
-                                siedmiokomorowe
-                            </figcaption>
-                        </figure>
-                    </li>
-                    
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_19.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Ocieplenie domu<br>
-                                styropianem grafitowym
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_20.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Ocieplenie poddasza<br>
-                                o grubości 30 cm
-                            </figcaption>
-                        </figure>
-                    </li>
-                    <li class="about-us-feature">
-                        <figure class="about-us-feature-figure">
-                            <div class="feature-icon-wrapper">
-                                <img src="/build/media/feature-icon_21.png" alt="Powierzchnia" class="feature-icon">
-                            </div>
-                            <figcaption class="feature-icon-text">
-                                Komfortowy kocioł<br>
-                                dwufunkcyjny z zasobnikiem
+                                <?= $icon['caption'] ?>
                             </figcaption>
                         </figure>
                     </li>
 
+                    <?php } ?>
                 </ul>
             </div>
         </section>
 
         <section class="section-about-us-location">
             <h2 class="section-title">
-                Zawsze blisko domu
+                <?= get_field( 'map-title' ) ?>
             </h2>
             <p class="about-us-location-paragraph">
-                Lokalizacja ma strategiczne znaczenie dla komfortu życia, dlatego 
-                wybraliśmy sąsiedztwo doliny Michałówki gdzie okoliczne łąki i las tworzą 
-                oazę spokoju i przestrzeń do spędzania wolnego czasu. Jednocześnie tylko 
-                1 km będzie dzielił Cię od granicy Poznania.
+                <?= get_field( 'map-text' ) ?>
             </p>
-
+            <?= get_field( 'map-place_1' ) ?>
             <div class="map-wrapper">
                 <div class="map-left">
                     <ul class="map-list" id="map-list">
