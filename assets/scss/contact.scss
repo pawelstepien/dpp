@@ -60,6 +60,7 @@
         flex-wrap: wrap;
         width: 900px;
         max-width: 90%;
+        margin-bottom: 60px;
 
         @media screen and (max-width: $small-laptop-breakpoint) {
             // width: 1200px;
@@ -129,8 +130,8 @@
             width: 900px;
         }
 
-        #contact-form {
-            margin-top: 94px;
+        #contact-form, form {
+            margin-top: 34px;
 
             @media screen and (max-width: $tablet-breakpoint) {
                 margin-top: 44px;
@@ -216,15 +217,8 @@
             margin-bottom: 24px;
         }
         .consent-wrapper {
-            display: flex;
+            display: inline;
 
-            .consent-text {
-                display: inline-block;
-                width: 94%;
-                margin-left: 20px;
-                margin-top: 0;
-                line-height: 1.6;
-            }
             .checkbox-wrapper {
                 display: inline-block;
                 width: 18px;
@@ -232,6 +226,7 @@
                 position: relative;
                 border: 1px solid #bbbbbb;
                 cursor: pointer;
+                display: block;
     
                 .checkbox {
                     opacity: 0;
@@ -258,6 +253,16 @@
                     opacity: 1;
                 }
             }
+
+        }
+        .consent-text {
+            display: inline-block;
+            width: 94%;
+            margin-left: 20px;
+            margin-top: 0;
+            line-height: 1.6;
+            margin-top: -18px; //this is becouse form plugin messes with markup
+            margin-left: 40px;
         }
 
         .form-bottom-wrapper {
@@ -281,5 +286,17 @@
                 }
             }
         }
+    }
+
+    .wpcf7-not-valid-tip {
+        color: red;
+    }
+    .screen-reader-response {
+        margin-top: 8px;
+        font-weight: 700;
+    }
+    .wpcf7-response-output {
+        margin-bottom: 18px;
+        font-weight: 700;
     }
 }

@@ -80,12 +80,11 @@
         </section>
         <section class="section-contact-form">
 
-            <form action="" id="contact-form">
+            <!-- <form action="" id="contact-form">
                 <div class="inputs-wrapper">
                     <div class="input-wrapper">
                         <label for="input-name" class="contact-label">
                             <?= get_field( 'form-input_1' ) ?>
-                            <!-- Imię i nazwisko* -->
                         </label>
                         <input type="text" name="name" id="input-name" class="contact-input" required>
                     </div>
@@ -93,7 +92,6 @@
                     <div class="input-wrapper">
                         <label for="input-mail" class="contact-label">
                             <?= get_field( 'form-input_1' ) ?>
-                            <!-- Adres e-mail* -->
                         </label>
                         <input type="email" name="mail" id="input-mail" class="contact-input" required>
                     </div>
@@ -124,7 +122,6 @@
 
                 <p class="contact-disclaimer">
                     <?= get_field( 'form-disclaimer' ) ?>
-                    <!-- * pola wymagane -->
                 </p>
 
                 <div class="consent-wrapper">
@@ -134,9 +131,6 @@
                     </label>
                     <p class="consent-text">
                         <?= get_field( 'form-consent' ) ?>
-                        <!-- Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z ustawą o ochronie danych osobowych w związku z realizacją zgłoszenia. Podanie danych jest dobrowolne, ale niezbędne do
-                        przetworzenia zapytania. Zostałem /am poinformowany /a, że przysługuje mi prawo dostępu do swoich danych, możliwości ich poprawiania oraz żądania zaprzestania ich przetwarzania. 
-                        Administratorem danych osobowych jest Dom pod Poznaniem. -->
                     </p>
                 </div>
 
@@ -146,8 +140,9 @@
                     </button>
                 </div>
 
-            </form>
+            </form> -->
             
+            <?php echo do_shortcode( '[contact-form-7 id="contact-form" title="Contact form 1"]' ); ?>
 
         </section>
     </main>

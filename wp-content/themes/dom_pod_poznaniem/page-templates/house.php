@@ -23,9 +23,10 @@
     <?php get_template_part( 'template-parts/menu' ); ?>
 
     <main id="house-page" class="page-main">
+    
         <section class="section-about-us-top">
             <picture>
-                <img class="about-us-top-photo" src="<?= get_field( 'header-image' )['url'] ?>?version=0.0"> 
+                <img class="about-us-top-photo" src="<?= get_field( 'header-image' )['url'] ?>"> 
             </picture>
             <div class="about-us-top-content">
                 <div class="horizontal-line"></div>
@@ -197,39 +198,26 @@
             <div class="map-wrapper">
                 <div class="map-left">
                     <ul class="map-list" id="map-list">
-                        <li class="map-list-item" data-query="52°22'34.4&quot;N 17°03'54.8&quot;E">
-                            Lokalizacja inwestycji
+
+                        <?php 
+                        for ($i = 1; $i <= 12; $i++) { 
+                        $name = get_field( ('map-place-name_' . $i) );
+                        $query = get_field( ('map-query_' . $i) );
+                        if (!$name) { continue; }
+                        ?>
+
+                        <li class="map-list-item" <?= $query ? ' data-query="' . htmlspecialchars($query, ENT_QUOTES) . '"' : '' ?>> 
+                            <?= $name ?>
                         </li>
-                        <li class="map-list-item" data-query="Szkoła Podstawowa nr 2 Zalasewo">
-                            Szkoła podstawowa - <b>&nbsp;1 km</b>
-                        </li>
-                        <li class="map-list-item" data-query="Żłobek|Przedszkole Zalasewo">
-                            Przedszkole / żłobek - <b>&nbsp;1 km</b>
-                        </li>
-                        <li class="map-list-item" data-query="52°22'33.0&quot;N 17°03'38.6&quot;E">
-                            Las / tereny spacerowe - <b>&nbsp;300 m</b>
-                        </li>
-                        <li class="map-list-item" data-query="Lidl|Dino|Biedronka|Żabka Zalasewo|Swarzędz">
-                            Lild / Biedronka / Dino / Żabka <b>&nbsp;1,5 km</b>
-                        </li>
-                        <li class="map-list-item" data-query="Portofino Pełne Smaku Pizza Swarzędz">
-                            Restauracja - <b>&nbsp;1,5 km</b>
-                        </li>
-                        <li class="map-list-item">
-                            Odległość od granicy Poznania - <b>&nbsp;0,5 km</b>
-                        </li>
-                        <li class="map-list-item">
-                            Trzy trasy dojazdu do Poznania
-                        </li>
-                        <li class="map-list-item">
-                            Dwuwariantowy dojazd do A2
-                        </li>
+
+                        <?php } ?>
+
                     </ul>
                 </div>
                 <div class="map-right">
                     <div class="mapouter">
                         <div class="gmap_canvas">
-                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?&ll=52.376222222222225,17.06522222222222&q=52%C2%B022'34.4%22N%2017%C2%B003'54.8%22E&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?&ll=52.376222222222225,17.06522222222222&q=<?= htmlspecialchars( get_field( 'map-query_1' ), ENT_QUOTES) ?>&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -238,11 +226,11 @@
 
         <section class="section-about-us-functions">
             <h2 class="section-title">
-                Funkcjonalności
+                <?= get_field( 'functions-title' ) ?>
             </h2>
 
             <p class="about-us-functions-paragraph">
-                Docenisz gdy już w tym domu zamieszkasz, natomiast My pomyśleliśmy o tym na etapie projektowania domu. Przestronny salon, jadalnia i kuchnia o powierzchni 46,6 m2 umożliwiają układ w wariancie otwartym lub zamkniętym. Pokoje o kształcie zbliżonym do kwadratu pozwalają na swobodę w aranżacji Zaprojektowaliśmy pomieszczenie gospodarczo – techniczne na pralnie oraz kotłownie. W garażu wydzieliliśmy miejsce na rowery, kosiarkę, rolki lub narty Przygotowaliśmy instalacje do podłączenia systemu alarmowego, nawadniania ogrodu oraz zmiękczacza wody.
+                <?= get_field( 'functions-text' ) ?>
             </p>
                        
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
@@ -252,31 +240,21 @@
                     <img src="/build/media/slider-arrow_right.png" alt="Następne" class="slider-arrow slider-arrow_right">
 
                     <div class="slider-slides">
+
+                        <?php 
+                        for ($i = 1; $i <= 8; $i++) { 
+                        $slide = get_field( ('slider-photo_' . $i) );
+                        if (!$slide) { continue; }
+                        ?>
+
                         <div class="slide-wrapper">
                             <div class="slide-crop">
-                                <img src="/build/media/slider_1.jpg?version=0.0" alt="" class="slide-image">
+                                <img src="<?= $slide['url'] ?>" alt="<?= $slide['alt'] ?>" class="slide-image">
                             </div>
                         </div>
-                        <div class="slide-wrapper">
-                            <div class="slide-crop">
-                                <img src="/build/media/slider_2.jpg?version=0.0" alt="" class="slide-image">
-                            </div>
-                        </div>
-                        <div class="slide-wrapper">
-                            <div class="slide-crop">
-                                <img src="/build/media/slider_3.jpg?version=0.0" alt="" class="slide-image">
-                            </div>
-                        </div>
-                        <div class="slide-wrapper">
-                            <div class="slide-crop">
-                                <img src="/build/media/slider_4.jpg?version=0.0" alt="" class="slide-image">
-                            </div>
-                        </div>
-                        <div class="slide-wrapper">
-                            <div class="slide-crop">
-                                <img src="/build/media/slider_5.jpg?version=0.0" alt="" class="slide-image">
-                            </div>
-                        </div>
+
+                        <?php } ?>
+
                     </div>
                 </div>
     
@@ -285,15 +263,16 @@
 
                 <div class="about-us-functions-dates">
                     <div class="left">
-                        <img src="/build/media/play-icon.png" alt="Start" class="dates-icon">
+                        <img src="<?= get_field( 'dates-icon-left' )['url'] ?>" alt="<?= get_field( 'dates-icon-left' )['alt'] ?>" class="dates-icon">
                         <span class="dates-text">
-                            Start inwestycji - Listopad 2019
+                            <?= get_field( 'dates-text-left' ); ?>
+
                         </span>
                     </div>
                     <div class="right">
-                        <img src="/build/media/key-icon.png" alt="Klucze" class="dates-icon">
+                        <img src="<?= get_field( 'dates-icon-right' )['url'] ?>" alt="<?= get_field( 'dates-icon-right' )['alt'] ?>" class="dates-icon">
                         <span class="dates-text">
-                            Przekazanie kluczy - Listopad 2020
+                        <?= get_field( 'dates-text-right' ); ?>
                         </span>
                     </div>
                 </div>
@@ -302,22 +281,27 @@
     </main>
     <footer class="about-us-footer">
         <h3 class="footer-title">
-            Zainteresowany?
+            <?= get_field( 'footer-title' ) ?>
+            <!-- Zainteresowany? -->
         </h3>
         <p class="footer-text">
-            Napisz lub zadzwoń a umówimy się na spotkanie
+            <?= get_field( 'footer-text' ) ?>
+            <!-- Napisz lub zadzwoń a umówimy się na spotkanie -->
         </p>
         <div class="footer-contact-wrapper">
-            <a href="tel:7307008164" class="footer-contact-anchor">
+            <!-- <a href="tel:7307008164" class="footer-contact-anchor"> -->
+            <a href="tel:<?= get_field( 'phone' ) ?>" class="footer-contact-anchor">
                 <img src="/build/media/phone-icon_footer.png" alt="Telefon" class="footer-contact-icon">
                 <span class="footer-contact-text">
-                    +&nbsp;48&nbsp;730&nbsp;008&nbsp;164
+                    <?= format_phone( get_field( 'phone' ) ) ?>
+                    <!-- +&nbsp;48&nbsp;730&nbsp;008&nbsp;164 -->
                 </span>
             </a>
             <a href="mailto:test@test.test" class="footer-contact-anchor">
                 <img src="/build/media/mail-icon_footer.png" alt="Telefon" class="footer-contact-icon">
                 <span class="footer-contact-text">
-                    biuro@dompodpoznaniem.pl
+                    <!-- biuro@dompodpoznaniem.pl -->
+                    <?= get_field( 'email' ) ?>
                 </span>
             </a>
         </div>

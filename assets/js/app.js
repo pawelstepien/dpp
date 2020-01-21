@@ -11,5 +11,8 @@ slider();
 import { map } from './map.js';
 map();
 
+import { removeCheckboxWrapper } from './fix_cf7_checkbox.js';
+removeCheckboxWrapper();
+
 // import { initParallax } from './parallax.js';
 // setTimeout(initParallax, 500);

@@ -1,6 +1,6 @@
     <header id="header">
         <div class="header-left">
-            <a href="/home" class="logo-anchor">
+            <a href="/" class="logo-anchor">
                 <picture class="logo">
                     <img src="/build/media/logo.png" alt="logo">
                 </picture>
