@@ -107,6 +107,7 @@ figure {
 }
 .page-main {
     padding-top: $header-height;
+    display: block;
     
     @media screen and (max-width: $laptop-breakpoint) {
         $scale-factor: 0.8;
@@ -125,12 +126,15 @@ figure {
         padding-top: $header-height * $scale-factor;
     }
 }
+
 .section-title {
     position: relative;
     text-transform: uppercase;
     font-size: 45px;
-    text-align: center;
+    display: inline-block;
     font-family: 'Playfair Display', 'Tahoma', sans-serif;
+    left: 50%;
+    transform: translateX(-50%);
 
     &::before, &::after {
         content: '';

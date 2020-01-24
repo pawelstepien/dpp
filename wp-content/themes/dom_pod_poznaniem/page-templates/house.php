@@ -115,9 +115,11 @@
         </section>
 
         <section class="section-about-us-architecture">
-            <h2 class="section-title">
-                <?= get_field( 'architecture-title' ) ?>
-            </h2>
+            <div class="section-title-wrapper">
+                <h2 class="section-title">
+                    <?= get_field( 'architecture-title' ) ?>
+                </h2>
+            </div>
 
             <picture class="about-us-architecture-house">
                 <img src="<?= get_field( 'architecture-photo' )['url'] ?>" alt="<?= get_field( 'architecture-photo' )['alt'] ?>">

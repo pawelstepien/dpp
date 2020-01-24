@@ -324,6 +324,10 @@
         text-align: center;
         padding-top: 16px;
 
+        .section-title-wrapper {
+            width: 100%;
+            text-align: left;
+        }
         .section-title {
             margin-bottom: 102px;
 
@@ -959,6 +963,7 @@
 
                     .slide-image {
                         height: 100%;
+                        max-height: 255px;
                         position: relative;
                         left: 50%;
                         transform: translateX(-50%);
