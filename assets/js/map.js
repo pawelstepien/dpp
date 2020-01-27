@@ -1,5 +1,6 @@
 export const map = () => {
     const embed = document.getElementById('gmap_canvas');
+    if (!embed) return;
 
     const latDsm = `52°22'34.4"N`;
     const longDsm = `17°03'54.8"E`;
@@ -47,4 +48,29 @@ export const map = () => {
     }
 
     initListenerOnLocationsList();
+
+    const checkIfMapIsInViewport = () => {
+        const rect = embed.getBoundingClientRect();
+        const isInViewport = rect.top - window.innerHeight < 0 && rect.bottom > 0;
+        return isInViewport;
+    };
+
+    const scrollHandler = () => {
+        const isInViewport = checkIfMapIsInViewport();
+        if (isInViewport) {
+            lazyLoadMap();
+        }
+    };
+
+    const lazyLoadMap = () => {
+        embed.src = embed.dataset.src;
+        window.removeEventListener('scroll', scrollHandler);
+        clearTimeout(lazyLoadTimeout);
+    };
+
+    const lazyLoadTimeout = setTimeout(lazyLoadMap, 4000);
+    window.addEventListener('scroll', scrollHandler);
+
+
+
 };

@@ -4,9 +4,12 @@ body {
     background-color: #ffffff;
     font-family: 'Montserrat', 'Helvetica', 'sans-serif';
 }
-ul {
+ul.list {
     list-style: none;
     padding: 0;
+}
+ul:not(.list), ol:not(.list) {
+    text-align: left;
 }
 sup {
     line-height: 0;
@@ -126,7 +129,13 @@ figure {
         padding-top: $header-height * $scale-factor;
     }
 }
-
+// html {
+//     margin-top: 0 !important;
+// }
+.section-title-wrapper {
+    width: 100%;
+    text-align: left;
+}
 .section-title {
     position: relative;
     text-transform: uppercase;
@@ -154,6 +163,7 @@ figure {
     }
     &::after {
         transform: translate(0, 2px) translateX(15px);
+        left: 100%;
     }
 
     @media screen and (max-width: $laptop-breakpoint) {
@@ -205,4 +215,8 @@ figure {
             transform: translate(0, 2px) translateX(15px * $scale-factor);
         }
     }
+}
+
+body:not(.show-captcha-badge) .grecaptcha-badge {
+    visibility: hidden;
 }

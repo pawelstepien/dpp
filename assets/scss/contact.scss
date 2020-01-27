@@ -103,6 +103,12 @@
                 @media screen and (max-width: $mobile-breakpoint) {
                     font-size: 15px;
                 }
+                @media screen and (max-width: 400px) {
+                    font-size: 14px;
+                }
+                @media screen and (max-width: 320px) {
+                    font-size: 13px;
+                }
             }
 
             
@@ -263,13 +269,27 @@
             line-height: 1.6;
             margin-top: -18px; //this is becouse form plugin messes with markup
             margin-left: 40px;
+            padding-right: 16px;
+            
+            @media screen and (max-width: 400px) {
+                margin-left: 30px;
+            }
         }
 
         .form-bottom-wrapper {
             display: flex;
             justify-content: flex-end;
-            margin-top: 33px;
+            margin: 42px 0;
+            margin-bottom: 80px;
+            align-items: flex-start;
 
+            @media screen and (max-width: $mobile-breakpoint) {
+                justify-content: center;
+            }
+
+            p {
+                margin: 0;
+            }
             .submit {
                 text-transform: uppercase;
                 font-size: 17px;
@@ -289,6 +309,7 @@
     }
 
     .wpcf7-not-valid-tip {
+        margin-top: 5px;
         color: red;
     }
     .screen-reader-response {

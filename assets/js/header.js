@@ -28,7 +28,6 @@ export function initHeader() {
     };
 
     const resizeHandle = () => {
-        console.log('resizeHandle')
         lastScroll = window.scrollY;
         if (window.innerWidth >= 1024) {
             navigation.style.height = '';

@@ -14,4 +14,17 @@ function format_phone($phone) {
     return $result;
 }
 
+add_action('get_header', 'remove_admin_login_header');
+
+function get_image_sources($field_name) {
+    echo ''?>
+        <source srcset="<?= get_field( $field_name )['sizes']['medium']?>?version=0.8"
+        media="(max-width: 300px)">
+        <source srcset="<?= get_field( $field_name )['sizes']['medium_large']?>?version=0.8"
+        media="(max-width: 768px)">
+        <source srcset="<?= get_field( $field_name )['sizes']['large']?>?version=0.8"
+        media="(max-width: 1024px)">
+    <?php ;
+}
+
 ?>

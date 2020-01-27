@@ -1,6 +1,9 @@
 <?php /* Template Name: Home */ ?>
 <html lang="pl">
 <head>
+        
+    <?php get_template_part( 'template-parts/analytics-scripts' ); ?>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,8 +17,14 @@
     </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="/build/app.css?version=0.3" rel="stylesheet">
-    <title>Dom Pod Poznaniem</title>
+
+    <link href="/build/app.css?version=0.8" rel="stylesheet">
+    
+    <title><?= wp_title() ?></title>
+
+    <?php get_template_part( 'template-parts/favicons' ); ?>
+
+    <?php wp_head() ?>
 </head>
 
 <body>
@@ -62,6 +71,9 @@
         </div>
     </main>
 
-    <script src="/build/app.js?version=0.3"></script>
+    <?php get_template_part( 'template-parts/cookies-notification' ); ?>
+
+    <script src="/build/app.js?version=0.8"></script>
+    <?php wp_footer() ?>
 </body>
 </html>

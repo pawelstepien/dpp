@@ -40,7 +40,7 @@ class WPCF7 {
 		self::load_module( 'listo' );
 		self::load_module( 'number' );
 		self::load_module( 'quiz' );
-		self::load_module( 'really-simple-captcha' );
+		// self::load_module( 'really-simple-captcha' );
 		self::load_module( 'recaptcha' );
 		self::load_module( 'response' );
 		self::load_module( 'select' );

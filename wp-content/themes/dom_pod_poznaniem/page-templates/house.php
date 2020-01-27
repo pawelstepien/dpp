@@ -1,6 +1,9 @@
 <?php /* Template Name: Dom_w_Swarzedzu */ ?>
 <html lang="pl">
 <head>
+        
+    <?php get_template_part( 'template-parts/analytics-scripts' ); ?>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -14,8 +17,14 @@
     </style>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="/build/app.css?version=0.3" rel="stylesheet">
-    <title><?= get_the_title() ?> - Dom Pod Poznaniem</title>
+
+    <link href="/build/app.css?version=0.8" rel="stylesheet">
+    
+    <title><?= wp_title() ?></title>
+
+    <?php get_template_part( 'template-parts/favicons' ); ?>
+
+    <?php wp_head(); ?>
 </head>
 
 <body>
@@ -26,6 +35,7 @@
     
         <section class="section-about-us-top">
             <picture>
+                <?php get_image_sources('header-image') ?>
                 <img class="about-us-top-photo" src="<?= get_field( 'header-image' )['url'] ?>"> 
             </picture>
             <div class="about-us-top-content">
@@ -36,7 +46,7 @@
             </div>
 
             <div class="about-us-top-features">
-                <ul class="about-us-top-features-list">
+                <ul class="about-us-top-features-list list">
 
                     <?php 
                     for ($i = 1; $i <= 12; $i++) { 
@@ -61,6 +71,7 @@
 
         <section class="section-about-us-download-plan">
             <picture class="download-plan-house">
+                <?php get_image_sources('download-photo') ?>
                 <img src="<?= get_field( 'download-photo' )['url'] ?>" alt="<?= get_field( 'download-photo' )['alt'] ?>">
             </picture>
             <?php if (get_field( 'download-file_1' )) { ?>
@@ -97,6 +108,7 @@
             ?>
             <figure class="about-us-interior-figure">
                 <picture class="about-us-interior-photo">
+                    <?php get_image_sources('interior-photo_' . $i) ?>
                     <img src="<?= $photo['url'] ?>" alt="<?= $photo['alt'] ?>">
                 </picture>
 
@@ -122,6 +134,7 @@
             </div>
 
             <picture class="about-us-architecture-house">
+                <?php get_image_sources( 'architecture-photo' ) ?>
                 <img src="<?= get_field( 'architecture-photo' )['url'] ?>" alt="<?= get_field( 'architecture-photo' )['alt'] ?>">
             </picture>
 
@@ -133,7 +146,7 @@
             </div>
 
             <div class="about-us-architecture-features">
-                <ul class="about-us-architecture-features-list">
+                <ul class="about-us-architecture-features-list list">
 
                     <?php 
                     for ($i = 1; $i <= 12; $i++) { 
@@ -165,7 +178,7 @@
             </p>
 
             <div class="about-us-energy-saving-features">
-                <ul class="about-us-energy-saving-features-list">
+                <ul class="about-us-energy-saving-features-list list">
 
                 <?php 
                     for ($i = 1; $i <= 8; $i++) { 
@@ -199,7 +212,7 @@
             <?= get_field( 'map-place_1' ) ?>
             <div class="map-wrapper">
                 <div class="map-left">
-                    <ul class="map-list" id="map-list">
+                    <ul class="map-list list" id="map-list">
 
                         <?php 
                         for ($i = 1; $i <= 12; $i++) { 
@@ -219,7 +232,7 @@
                 <div class="map-right">
                     <div class="mapouter">
                         <div class="gmap_canvas">
-                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?&ll=52.376222222222225,17.06522222222222&q=<?= htmlspecialchars( get_field( 'map-query_1' ), ENT_QUOTES) ?>&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            <iframe id="gmap_canvas" data-src="https://maps.google.com/maps?&ll=52.376222222222225,17.06522222222222&q=<?= htmlspecialchars( get_field( 'map-query_1' ), ENT_QUOTES) ?>&z=14&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
                         </div>
                     </div>
                 </div>
@@ -313,6 +326,9 @@
     <img src="" alt="" id="popup-image">
     </div>
 
-    <script src="/build/app.js?version=0.3"></script>
+    <?php get_template_part( 'template-parts/cookies-notification' ); ?>
+
+    <script src="/build/app.js?version=0.8"></script>
+    <?php wp_footer(); ?>
 </body>
 </html>

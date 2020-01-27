@@ -1,17 +1,23 @@
-    <header id="header">
+    <?php 
+    $menu_items = wp_get_nav_menu_items( 'menu-top' ); 
+    $should_stretch_left_side = count( $menu_items ) > 4;
+    $logo = get_field( 'logo' );
+    ?>
+    <header id="header"<?= $should_stretch_left_side ? ' class="wider-left"' : ''?>>
         <div class="header-left">
             <a href="/" class="logo-anchor">
                 <picture class="logo">
-                    <img src="/build/media/logo.png" alt="logo">
+                    <img src="<?= $logo ? $logo['url'] : '/build/media/logo.png' ?>" alt="logo">
                 </picture>
             </a>
 
             <nav id="navigation">
-                <ul class="navigation-links-list" id="navigation-links-list">
+                <ul class="navigation-links-list list" id="navigation-links-list">
 
-                <?php foreach (wp_get_nav_menu_items( 'menu-top' ) as $item ) { ?>
+                <?php foreach ( $menu_items as $item ) { ?>
                     <li class="navigation-links-list-item">
                         <a class="navigation-link-anchor" href="<?= $item->url ?>" title="<?= $item->title ?>">
+                            <!-- <?= str_replace(' ', '&nbsp;', $item->title); ?> -->
                             <?= $item->title ?>
                         </a>
                     </li>
@@ -31,7 +37,7 @@
 
         <div class="header-right">
             <div class="header-contact">
-                <ul class="contact-links-list">
+                <ul class="contact-links-list list">
                     <li class="contact-links-list-item">
                         <a class="contact-link-anchor" href="<?= get_field( 'facebook' ) ?>" target="_blank">
                             <img src="/build/media/facebook-icon_white.png" alt="" class="contact-icon">

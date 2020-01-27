@@ -324,10 +324,6 @@
         text-align: center;
         padding-top: 16px;
 
-        .section-title-wrapper {
-            width: 100%;
-            text-align: left;
-        }
         .section-title {
             margin-bottom: 102px;
 
@@ -704,6 +700,7 @@
             }
             .map-right {
                 width: 60%;
+                max-height: 750px;
 
                 .mapouter, .gmap_canvas, #gmap_canvas {
                     width: 100%;

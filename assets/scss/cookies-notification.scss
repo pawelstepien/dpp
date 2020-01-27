@@ -1,0 +1,38 @@
+.cookies-notification {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: none;
+    padding: 15px 30px;
+    background-color: $gray-background;
+    box-shadow: 0 -2px 5px 1px rgba(100,100,100,0.25);
+    z-index: 10;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $mobile-breakpoint) {
+        flex-direction: column;
+    }
+
+    &.show {
+        display: flex;
+    }
+
+    .cookies-notification-text, .cookies-notification-button {
+        margin: 0 10px;
+    }
+    .cookies-notification-text {
+        font-size: 12px;
+        color: #585858;
+    }
+    .cookies-notification-button {
+        font-size: 14px;
+        padding: 18px;
+        min-width: 136px; //IE fix
+
+        @media screen and (max-width: 600px) {
+            margin-top: 16px;
+        }
+    }
+}

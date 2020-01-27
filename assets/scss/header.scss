@@ -119,6 +119,14 @@
                     }
                 }
             }
+            @media screen and (min-width: $tablet-breakpoint + 1px) and (max-width: 1150px) {
+                .navigation-links-list {
+                    margin-left: -15px;
+                    .navigation-links-list-item {
+                        margin-right: 30px;
+                    }
+                }
+            }
         }
 
         @media screen and (max-width: $tablet-breakpoint) {
@@ -190,6 +198,40 @@
                         
                     }
                 }
+            }
+        }
+    }
+
+    &.wider-left {
+        @media screen and (min-width: $tablet-breakpoint+1px) {
+            .header-left {
+                padding-left: pxToVw(60);
+                width: pxToVw(1400);
+                .logo-anchor .logo {
+                    margin-right: 3vw;
+                }
+            }
+            
+            .header-right {
+                background-color: $green;
+                padding-right: pxToVw(60);
+                width: pxToVw(520);
+            }
+        }
+        @media screen and (min-width: $tablet-breakpoint+1px) and (max-width: $laptop-breakpoint) {
+            .header-left {
+                #navigation .navigation-links-list {
+                    margin-left: -10px;
+                    .navigation-links-list-item {
+                        margin-right: 32px;
+                    }
+                }
+            }
+            
+            .header-right {
+                background-color: $green;
+                padding-right: pxToVw(60);
+                width: pxToVw(520);
             }
         }
     }
@@ -288,6 +330,16 @@
 
         .header-right {
             width: 100%;
+        }
+    }
+}
+
+body.customize-support { //this class is added only when user wp user is logged in
+    #header {
+        top: 32px; //wordpress adds margin top on html tag when user is logged in
+        
+        @media screen and (max-width: 782px) {
+            top: 46px;
         }
     }
 }
