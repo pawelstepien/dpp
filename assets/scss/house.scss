@@ -30,6 +30,7 @@
                 letter-spacing: 0.3px;
                 line-height: 1.6;
                 color: #585858;
+                margin-bottom: 1em;
             }
 
             @media screen and (max-width: $laptop-breakpoint) {
@@ -250,6 +251,7 @@
                     letter-spacing: 0.5px;
                     font-weight: 500;
                     color: #585858;
+                    margin-bottom: 1em;
                 }
             }
 
@@ -361,6 +363,7 @@
                 letter-spacing: 0.3px;
                 line-height: 1.6;
                 color: #585858;
+                margin-bottom: 1em;
 
                 @media screen and (max-width: $small-laptop-breakpoint) {
                     $scale-factor: 0.8;
@@ -501,6 +504,7 @@
             margin-top: 51px;
             margin-bottom: 51px;
             padding: 0 25vw;
+            margin-bottom: 1em;
 
             @media screen and (max-width: $small-laptop-breakpoint) {
                 $scale-factor: 0.8;
@@ -805,11 +809,15 @@
                 margin-bottom: 87px * $scale-factor;
             }
 
+            @media screen and (max-width: $tablet-breakpoint) {
+                padding: 0 14vw;
+            }
+
             @media screen and (max-width: $mobile-breakpoint) {
                 $scale-factor: 0.667;
                 font-size: 19px * $scale-factor;
                 letter-spacing: 0.3px * $scale-factor;
-                margin-bottom: 87px * $scale-factor;
+                margin-bottom: 87px * $scale-factor;    
             }
         }
 
@@ -1063,6 +1071,7 @@
         text-align: center;
         font-size: 19px;
         font-weight: 500;
+        margin: 1em 0;
     }
 
     .footer-contact-wrapper {

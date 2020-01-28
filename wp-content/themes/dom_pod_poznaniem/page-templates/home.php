@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 
-    <link href="/build/app.css?version=0.8" rel="stylesheet">
+    <link href="/build/app.css?version=0.12" rel="stylesheet">
     
     <title><?= wp_title() ?></title>
 
@@ -73,7 +73,7 @@
 
     <?php get_template_part( 'template-parts/cookies-notification' ); ?>
 
-    <script src="/build/app.js?version=0.8"></script>
+    <script src="/build/app.js?version=0.12"></script>
     <?php wp_footer() ?>
 </body>
 </html>

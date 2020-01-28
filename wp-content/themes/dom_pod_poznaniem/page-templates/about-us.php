@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 
-    <link href="/build/app.css?version=0.8" rel="stylesheet">
+    <link href="/build/app.css?version=0.12" rel="stylesheet">
     
     <title><?= wp_title() ?></title>
 
@@ -43,19 +43,19 @@
                     <?= get_the_title() ?>
                 </h1>
             </div>
-                <p class="contact-top-content-text">
+                <div class="contact-top-content-text">
                     <?= get_field( 'header-content' ) ?>
-                </p>
+                </div>
             </div>
         </section>
 
         <section class="section-about-us-description">
-            <p class="about-us-paragraph">
+            <div class="about-us-paragraph">
                 <?= get_field( 'description-paragraph_1' ) ?>
-            </p>
-            <p class="about-us-paragraph">
+            </div>
+            <div class="about-us-paragraph">
                 <?= get_field( 'description-paragraph_2' ) ?>
-            </p>
+            </div>
         </section>
 
         <section class="section-about-us-benefits">
@@ -65,7 +65,7 @@
 
             <article class="benefit-wrapper">
                 <figure class="benefit-icon-wrapper">
-                    <img class="benefit-icon" src="<?= get_field( 'benefit_1-icon' )['url'] ?>?version=0.8"> 
+                    <img class="benefit-icon" src="<?= get_field( 'benefit_1-icon' )['url'] ?>?version=0.12"> 
                 </figure>
                 <div class="benefit-text-wrapper">
                     <h5 class="benefit-title">
@@ -79,7 +79,7 @@
 
             <article class="benefit-wrapper">
                 <figure class="benefit-icon-wrapper">
-                    <img class="benefit-icon" src="<?= get_field( 'benefit_2-icon' )['url'] ?>?version=0.8"> 
+                    <img class="benefit-icon" src="<?= get_field( 'benefit_2-icon' )['url'] ?>?version=0.12"> 
                 </figure>
                 <div class="benefit-text-wrapper">
                     <h5 class="benefit-title">
@@ -93,7 +93,7 @@
 
             <article class="benefit-wrapper">
                 <figure class="benefit-icon-wrapper">
-                    <img class="benefit-icon" src="<?= get_field( 'benefit_3-icon' )['url'] ?>?version=0.8"> 
+                    <img class="benefit-icon" src="<?= get_field( 'benefit_3-icon' )['url'] ?>?version=0.12"> 
                 </figure>
                 <div class="benefit-text-wrapper">
                     <h5 class="benefit-title">
@@ -134,7 +134,7 @@
 
     <?php get_template_part( 'template-parts/cookies-notification' ); ?>
 
-    <script src="/build/app.js?version=0.8"></script>
+    <script src="/build/app.js?version=0.12"></script>
     <?php wp_footer(); ?>
 </body>
 </html>

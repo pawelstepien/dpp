@@ -14,7 +14,7 @@
             background: $gray-background;
             width: 990px;
             max-width: 100%;
-
+            
             .section-title {
                 margin: 0;
             }
@@ -26,6 +26,7 @@
                 letter-spacing: 0.3px;
                 line-height: 1.6;
                 color: #585858;
+                margin-bottom: 1em;
             }
 
             @media screen and (max-width: $laptop-breakpoint) {

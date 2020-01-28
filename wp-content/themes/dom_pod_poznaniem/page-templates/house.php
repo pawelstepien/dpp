@@ -18,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap&subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 
-    <link href="/build/app.css?version=0.8" rel="stylesheet">
+    <link href="/build/app.css?version=0.12" rel="stylesheet">
     
     <title><?= wp_title() ?></title>
 
@@ -40,9 +40,9 @@
             </picture>
             <div class="about-us-top-content">
                 <div class="horizontal-line"></div>
-                <p class="about-us-top-content-text">
+                <div class="about-us-top-content-text">
                     <?= get_field( 'header-text' ) ?>
-                </p>
+                </div>
             </div>
 
             <div class="about-us-top-features">
@@ -117,9 +117,9 @@
                         <?= $photo['caption'] ?>
                         <div class="horizontal-line horizontal-line_bellow">
                     </h3>
-                    <p class="interior-content-paragraph">
+                    <div class="interior-content-paragraph">
                         <?= $photo['description'] ?>
-                    </p>
+                    </div>
                 </figcaption>
             </figure>
             <?php } ?>
@@ -140,9 +140,9 @@
 
             <div class="about-us-architecture-content">
                 <div class="horizontal-line"></div>
-                <p class="about-us-architecture-content-text">
+                <div class="about-us-architecture-content-text">
                     <?= get_field( 'achitecture-text' ) ?>
-                </p>
+                </div>
             </div>
 
             <div class="about-us-architecture-features">
@@ -173,9 +173,9 @@
             <h2 class="section-title">
                 <?= get_field( 'energy-savings-title' ) ?>
             </h2>
-            <p class="about-us-energy-saving-paragraph">
+            <div class="about-us-energy-saving-paragraph">
                 <?= get_field( 'energy-savings-text' ) ?>
-            </p>
+            </div>
 
             <div class="about-us-energy-saving-features">
                 <ul class="about-us-energy-saving-features-list list">
@@ -206,9 +206,9 @@
             <h2 class="section-title">
                 <?= get_field( 'map-title' ) ?>
             </h2>
-            <p class="about-us-location-paragraph">
+            <div class="about-us-location-paragraph">
                 <?= get_field( 'map-text' ) ?>
-            </p>
+            </div>
             <?= get_field( 'map-place_1' ) ?>
             <div class="map-wrapper">
                 <div class="map-left">
@@ -244,9 +244,9 @@
                 <?= get_field( 'functions-title' ) ?>
             </h2>
 
-            <p class="about-us-functions-paragraph">
+            <div class="about-us-functions-paragraph">
                 <?= get_field( 'functions-text' ) ?>
-            </p>
+            </div>
                        
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
             <div class="slider-and-date-wrapper">
@@ -328,7 +328,7 @@
 
     <?php get_template_part( 'template-parts/cookies-notification' ); ?>
 
-    <script src="/build/app.js?version=0.8"></script>
+    <script src="/build/app.js?version=0.12"></script>
     <?php wp_footer(); ?>
 </body>
 </html>
